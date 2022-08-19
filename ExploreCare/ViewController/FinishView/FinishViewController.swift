@@ -13,7 +13,7 @@ class FinishViewController: UIViewController {
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var playAgainButton: UIButton!
     
-    public var mission: Mission?
+    public var mission: Category?
     
     public var level = 0
     
@@ -39,6 +39,6 @@ class FinishViewController: UIViewController {
     
     @IBAction func finishButton(_ sender: Any) {
         guard let window = UIApplication.shared.keyWindow else {return}
-        window.rootViewController = TabBarViewController()
+        window.rootViewController = TabExploreViewController()
     }
 }

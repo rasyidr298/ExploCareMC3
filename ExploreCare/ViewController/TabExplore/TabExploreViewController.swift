@@ -19,7 +19,7 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var tableHeight: NSLayoutConstraint!
     @IBOutlet weak var tableWidth: NSLayoutConstraint!
     
-    private var listObject: [Mission] = []
+    private var listObject: [Category] = []
     
     private var viewModel = ObjectRecogViewModel()
     
@@ -40,6 +40,7 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
     
     private func setupView() {
         headerView.layer.cornerRadius = 8
+        AppUtility.lockOrientation(.landscapeRight)
         
         let name = UserDefaults.standard.string(forKey: loginNameDef)
         loginNameLabel.text = "Hi \(name ?? "")"
@@ -113,20 +114,20 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
 extension TabExploreViewController: UITableViewDelegate, UITableViewDataSource {
     
     func setupTable() {
-        self.listObject.append(contentsOf: Mission.dataObject())
+        self.listObject.append(contentsOf: Category.dataObject())
         UITableView.appearance().separatorColor = .clear
         
         missionTableView.dataSource = self
         missionTableView.delegate = self
         
-        let nib = UINib(nibName: "MissionTableViewCell", bundle: nil)
+        let nib = UINib(nibName: "CategoryTableViewCell", bundle: nil)
         
-        missionTableView.register(nib, forCellReuseIdentifier: "MissionTableViewCell")
+        missionTableView.register(nib, forCellReuseIdentifier: "CategoryTableViewCell")
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let missionListData = listObject[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MissionTableViewCell") as! MissionTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryTableViewCell") as! CategoryTableViewCell
         
         cell.selectionStyle = .none
         cell.missions = missionListData

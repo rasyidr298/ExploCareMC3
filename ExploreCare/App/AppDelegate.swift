@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !showOnboarding {
             window?.rootViewController = OnBoardingViewController()
         }else {
-            window?.rootViewController = TabBarViewController()
+            window?.rootViewController = TabExploreViewController()
         }
         
         return true

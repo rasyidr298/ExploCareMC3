@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingViewController" customModule="learnEnglish" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingViewController" customModule="ExploreCare" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="SnZ-LN-lP1" id="2Pe-Yk-3Uw"/>
                 <outlet property="loginName" destination="kuw-4J-geT" id="v4y-me-YbQ"/>

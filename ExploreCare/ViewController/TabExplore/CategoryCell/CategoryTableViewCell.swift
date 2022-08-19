@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MissionTableViewCell: UITableViewCell {
+class CategoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var countObjectLabel: UILabel!
@@ -23,7 +23,7 @@ class MissionTableViewCell: UITableViewCell {
     @IBOutlet weak var objectImage4: UIImageView!
     @IBOutlet weak var objectImage5: UIImageView!
     
-    public var missions: Mission?
+    public var missions: Category?
     
     private var  viewModel = ObjectRecogViewModel()
     
@@ -54,7 +54,7 @@ class MissionTableViewCell: UITableViewCell {
     }
     
     public func updateMissionsCell() {
-        levelLabel.text = "Level \(self.missions?.level ?? 1)"
+//        levelLabel.text = "Level \(self.missions?.level ?? 1)"
         countObjectLabel.text = "\(self.missions?.object.count ?? 1) Item to find"
         
         objectImage1.image = missions?.object[0].objectImage

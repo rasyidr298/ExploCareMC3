@@ -18,7 +18,7 @@ class ObjectRecogViewController: UIViewController {
     @IBOutlet weak var bgLevelView: UIView!
     @IBOutlet weak var finishButton: UIButton!
     
-    public var mission: Mission?
+    public var mission: Category?
     private let measure = Measure()
     var player:AVAudioPlayer!
     
@@ -73,7 +73,7 @@ class ObjectRecogViewController: UIViewController {
     
     @IBAction func closeButton(_ sender: Any) {
         guard let window = UIApplication.shared.keyWindow else {return}
-        window.rootViewController = TabBarViewController()
+        window.rootViewController = TabExploreViewController()
         
         //push value to iwatch
         let name = UserDefaults.standard.string(forKey: loginNameDef)
@@ -84,7 +84,7 @@ class ObjectRecogViewController: UIViewController {
         guard let window = UIApplication.shared.keyWindow else {return}
         let vc = FinishViewController()
         vc.mission = self.mission
-        vc.level = mission?.level ?? 0
+//        vc.level = mission?.level ?? 0
         window.rootViewController = vc
         
         //push value to iwatch
@@ -270,7 +270,7 @@ extension ObjectRecogViewController {
     func setupView() {
         bgLevelView.layer.cornerRadius = 8
         AppUtility.lockOrientation(.landscapeRight)
-        levelLabel.text = "Level \(mission?.level ?? 0)"
+//        levelLabel.text = "Level \(mission?.level ?? 0)"
         finishButton.isHidden = true
         objectTableView.allowsSelection = false
     }

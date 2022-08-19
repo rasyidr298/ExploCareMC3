@@ -35,6 +35,7 @@ class OnboardingPageViewController: UIPageViewController {
     
     func setupView() {
 //        view.backgroundColor = .black
+        AppUtility.lockOrientation(.landscapeRight)
         
         dataSource = self
         delegate = self

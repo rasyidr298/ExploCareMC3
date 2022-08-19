@@ -69,7 +69,7 @@ extension OnBoardingViewController {
             UserDefaults.standard.set(loginName.text, forKey: loginNameDef)
 
             guard let window = UIApplication.shared.keyWindow else {return}
-            window.rootViewController = TabBarViewController()
+            window.rootViewController = TabExploreViewController()
         }
     }
 }
