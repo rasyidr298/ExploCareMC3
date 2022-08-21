@@ -67,6 +67,7 @@
 		01E538D328AF744B0017BFE4 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E538CF28AF744B0017BFE4 /* Category+CoreDataClass.swift */; };
 		01E538D428AF744B0017BFE4 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E538D028AF744B0017BFE4 /* Category+CoreDataProperties.swift */; };
 		01E538D728AF74DF0017BFE4 /* DbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E538D628AF74DF0017BFE4 /* DbViewModel.swift */; };
+		01E538E328B2AB840017BFE4 /* AVServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E538E228B2AB840017BFE4 /* AVServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +175,7 @@
 		01E538CF28AF744B0017BFE4 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		01E538D028AF744B0017BFE4 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		01E538D628AF74DF0017BFE4 /* DbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbViewModel.swift; sourceTree = "<group>"; };
+		01E538E228B2AB840017BFE4 /* AVServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,6 +433,7 @@
 				011EAA00286D9D100078D4CD /* View.swift */,
 				011EAA02286DC7F10078D4CD /* Logger.swift */,
 				013458B02871ACC100BCAAE6 /* ConfettiView.swift */,
+				01E538E228B2AB840017BFE4 /* AVServices.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 				011EA9DA286704350078D4CD /* TabExploreViewController.swift in Sources */,
 				011EAA03286DC7F10078D4CD /* Logger.swift in Sources */,
 				011EA9BB286564030078D4CD /* OnBoardingPageViewController.swift in Sources */,
+				01E538E328B2AB840017BFE4 /* AVServices.swift in Sources */,
 				01E538D328AF744B0017BFE4 /* Category+CoreDataClass.swift in Sources */,
 				0124C7E3286435C0001A4D58 /* Measure.swift in Sources */,
 				0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */,

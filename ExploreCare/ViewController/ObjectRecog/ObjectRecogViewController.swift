@@ -16,13 +16,14 @@ class ObjectRecogViewController: UIViewController {
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var bgLevelView: UIView!
     @IBOutlet weak var objectImageView: UIImageView!
-    @IBOutlet weak var guideLabel: UILabel!
+    @IBOutlet weak var guideObjectName: UILabel!
+    @IBOutlet weak var guideDescLabel: UILabel!
     @IBOutlet weak var charImageView: UIImageView!
     
     public var category: Category?
     private var objectRecog: [ObjectRecog] = []
     private let measure = Measure()
-    var player:AVAudioPlayer!
+    var player = AVService.shared
     var indexObjectRecog = 0
     
     // MARK: - Init Model Core ML
@@ -113,18 +114,6 @@ extension ObjectRecogViewController: VideoCaptureDelegate {
             self.predictUsingVision(pixelBuffer: pixelBuffer)
         }
     }
-    
-    func playSound(soundName: String) {
-        let path = Bundle.main.path(forResource: soundName, ofType:nil)!
-        let url = URL(fileURLWithPath: path)
-        
-        do {
-            player = try AVAudioPlayer(contentsOf: url)
-            player.play()
-        } catch let error{
-            print(error.localizedDescription)
-        }
-    }
 }
 
 // MARK: - Vision & CoreML
@@ -181,12 +170,14 @@ extension ObjectRecogViewController: CustomAlertDelegate {
         
         if indexObjectRecog >= 5 {
             indexObjectRecog = 0
-            guideLabel.text = "First, let's find \(category!.object[0].name)"
+            guideDescLabel.text = "\(textFirstGuide()), let's find "
+            guideObjectName.text = category!.object[indexObjectRecog].name
             objectImageView.image = (category?.object[0].objectImage)!
             
             //to celebrate viewcontroller
         }else {
-            guideLabel.text = "First, let's find \(category!.object[indexObjectRecog].name)"
+            guideDescLabel.text = "\(textFirstGuide()), let's find "
+            guideObjectName.text = category!.object[indexObjectRecog].name
             objectImageView.image = (category?.object[indexObjectRecog].objectImage)!
         }
         
@@ -194,7 +185,7 @@ extension ObjectRecogViewController: CustomAlertDelegate {
     }
     
     func onSpeakerButttonPressed(_ alert: CustomAllertViewController, objectRecog: ObjectRecog) {
-        playObjectSound(objectRecog: objectRecog)
+        playObjectSound(player: player, objectRecog: objectRecog)
     }
 }
 
@@ -211,12 +202,13 @@ extension ObjectRecogViewController {
     }
     
     func setupView() {
-        bgLevelView.layer.cornerRadius = 8
-        objectImageView.layer.cornerRadius = 8
+        bgLevelView.layer.cornerRadius = 12
+        objectImageView.layer.cornerRadius = 12
         AppUtility.lockOrientation(.landscapeRight)
         levelLabel.text = category?.categoryName
         charImageView.image = category?.charImage
-        guideLabel.text = "First, let's find \(category!.object[indexObjectRecog].name)"
+        guideDescLabel.text = "\(textFirstGuide()), let's find "
+        guideObjectName.text = category!.object[indexObjectRecog].name
         objectImageView.image = (category?.object[indexObjectRecog].objectImage)!
     }
     
@@ -242,28 +234,22 @@ extension ObjectRecogViewController {
         customAllert.show()
     }
     
-    func playObjectSound(objectRecog: ObjectRecog) {
-        switch objectRecog.objectName {
-        case "backpack": playSound(soundName: "backpack.mp3")
-        case "tvmonitor": playSound(soundName: "tv.mp3")
-        case "clock": playSound(soundName: "clock.mp3")
-        case "book": playSound(soundName: "book.mp3")
-        case "laptop": playSound(soundName: "laptop.mp3")
-        case "cup": playSound(soundName: "cup.mp3")
-        default:
-            playSound(soundName: "laptop.mp3")
-        }
-    }
-    
     func matchingObject(objectRecog: ObjectRecog) {
         DispatchQueue.main.async { [self] in
             showConfetti()
             showCustomAllert(objectRecog: objectRecog)
-            playSound(soundName: "correct.aiff")
+            playAdditionalSound(player: player, type: "correct")
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
             
             //push value to iwatch
             viewModel.sendMessageToIwatch(name: udUserName, time: 0, startExplore: false)
         }
+    }
+    
+    func textFirstGuide() -> String {
+        if indexObjectRecog != 0 {
+            return "Next"
+        }
+        return "First"
     }
 }

@@ -147,7 +147,7 @@
         <image name="ic_badge" width="70" height="84"/>
         <image name="ic_onboard1" width="299" height="299"/>
         <namedColor name="mainColor">
-            <color red="0.27799999713897705" green="0.70999997854232788" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.17900000512599945" green="0.27700001001358032" blue="0.46599999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
