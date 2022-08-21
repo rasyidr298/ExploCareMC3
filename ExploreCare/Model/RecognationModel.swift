@@ -101,9 +101,9 @@ extension Category {
                 ObjectRecog(name: "Motorbike", objectName: "motorbike", descriptionName: "Iky rides the motorbike with his brother.", objectImage: UIImage(named: "ic_motorbike")!, objectImageLabel: UIImage(named: "ic_motorbike_label")!)
             ]),
             
-            Category(categoryName: "Test1", categoryImage: UIImage(systemName: "trash.circle.fill")!, isLockLevel: true, storyTellingText: "", charImage: UIImage(named: "")!, object: []),
+            Category(categoryName: "Test1", categoryImage: UIImage(systemName: "trash.circle.fill")!, isLockLevel: true, storyTellingText: "", charImage: UIImage(named: "ic_char_iky")!, object: []),
         
-            Category(categoryName: "Test2", categoryImage: UIImage(systemName: "trash.circle.fill")!, isLockLevel: true, storyTellingText: "", charImage: UIImage(named: "")!, object: [])
+            Category(categoryName: "Test2", categoryImage: UIImage(systemName: "trash.circle.fill")!, isLockLevel: true, storyTellingText: "", charImage: UIImage(named: "ic_char_iky")!, object: [])
         ]
     }
 }

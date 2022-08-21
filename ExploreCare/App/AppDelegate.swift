@@ -18,8 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let showOnboarding = UserDefaults.standard.bool(forKey: showOnBoard)
-        if !showOnboarding {
+        if !udIsShowOnBoard {
             window?.rootViewController = OnBoardingViewController()
         }else {
             window?.rootViewController = TabExploreViewController()

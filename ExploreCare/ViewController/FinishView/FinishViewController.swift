@@ -33,7 +33,7 @@ class FinishViewController: UIViewController {
     @IBAction func playAgainButton(_ sender: Any) {
         guard let window = UIApplication.shared.keyWindow else {return}
         let vc = ObjectRecogViewController()
-        vc.mission = self.mission
+        vc.category = self.mission
         window.rootViewController = vc
     }
     

@@ -36,12 +36,11 @@ class CategoryTableViewCell: UITableViewCell {
     @IBAction func playButton(_ sender: Any) {
         guard let window = UIApplication.shared.keyWindow else {return}
         let vc = ObjectRecogViewController()
-        vc.mission = self.missions
+        vc.category = self.missions
         window.rootViewController = vc
         
         //push data to watch
-        let name = UserDefaults.standard.string(forKey: loginNameDef)
-        viewModel.sendMessageToIwatch(name: name, time: 0, startExplore: true)
+        viewModel.sendMessageToIwatch(name: udUserName, time: 0, startExplore: true)
     }
     
     private func setupView() {

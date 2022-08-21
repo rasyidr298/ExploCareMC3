@@ -42,11 +42,10 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
         headerView.layer.cornerRadius = 8
         AppUtility.lockOrientation(.landscapeRight)
         
-        let name = UserDefaults.standard.string(forKey: loginNameDef)
-        loginNameLabel.text = "Hi \(name ?? "")"
+        loginNameLabel.text = "Hi \(udUserName ?? "") "
         
         //push data to watch
-        viewModel.sendMessageToIwatch(name: name, time: 0, startExplore: false)
+        viewModel.sendMessageToIwatch(name: udUserName, time: 0, startExplore: false)
         
         //tableview inside scroll
         tableHeight.constant = self.view.frame.height-350

@@ -7,12 +7,11 @@
 
 import Foundation
 
-//viewController
-let onBoardVCId = "OnBoardingViewController"
-let onBoardPageVCId = "OnboardingPageViewController"
-let onBoardContentVCId = "OnboardingContentViewController"
 
-//defaults
-let showOnBoard = "showOnBoardLearnEng"
-let loginNameDef = "loginNameDef"
+//key userdefaults
+let udIsShowOnBoardKey = "udIsShowOnBoardKey"
+let udUserNameKey = "udUserNameKey"
 
+//value userdefaults
+let udUserName = UserDefaults.standard.string(forKey: udUserNameKey)
+let udIsShowOnBoard = UserDefaults.standard.bool(forKey: udIsShowOnBoardKey)

@@ -8,26 +8,22 @@
 import UIKit
 
 protocol CustomAlertDelegate: class {
-    func onPositiveButttonPressed(_ alert: CustomAllertViewController, indexObject: Int)
-    func onNegativeButtonPressed(_ alert: CustomAllertViewController, indexObject: Int)
+    func onNextButttonPressed(_ alert: CustomAllertViewController, objectRecog: ObjectRecog)
+    func onSpeakerButttonPressed(_ alert: CustomAllertViewController, objectRecog: ObjectRecog)
 }
 
 class CustomAllertViewController: UIViewController {
-
+    
+    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var objectImage: UIImageView!
     @IBOutlet weak var objectNameLabel: UILabel!
-    @IBOutlet weak var negativeButton: UIButton!
-    @IBOutlet weak var positiveButton: UIButton!
     
-    var allertTitle = ""
-    var allertPositiveButtonTitle = "Ok"
-    var allertNegativeButtonTitle = "Cancel"
-    var allertImage = UIImage.init(named: "ic_cup")
-    var indexObject = 0
+    var objectRecog: ObjectRecog?
+    var indextObject = 0
     
     weak var delegate: CustomAlertDelegate?
-
+    
     init() {
         super.init(nibName: "CustomAllertViewController", bundle: Bundle(for: CustomAllertViewController.self))
         self.modalPresentationStyle = .overCurrentContext
@@ -41,7 +37,7 @@ class CustomAllertViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupView()
     }
     
@@ -53,22 +49,26 @@ class CustomAllertViewController: UIViewController {
         }
     }
     
-    @IBAction func positiveButton(_ sender: Any) {
-        delegate?.onPositiveButttonPressed(self, indexObject: indexObject)
+    @IBAction func speakerButton(_ sender: Any) {
+        delegate?.onSpeakerButttonPressed(self, objectRecog: objectRecog!)
     }
     
-    @IBAction func negativeButton(_ sender: Any) {
+    @IBAction func nextButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        delegate?.onNegativeButtonPressed(self, indexObject: indexObject)
+        delegate?.onNextButttonPressed(self, objectRecog: objectRecog!)
     }
-
+    
     func setupView() {
         AppUtility.lockOrientation(.landscapeRight)
         containerView.layer.cornerRadius = 12
-        objectNameLabel.text = allertTitle
-        objectImage.image = allertImage
-        positiveButton.setTitle(allertPositiveButtonTitle, for: .normal)
-        negativeButton.setTitle(allertNegativeButtonTitle, for: .normal)
+        objectNameLabel.text = objectRecog?.objectName
+        objectImage.image = objectRecog?.objectImage
+        
+        if indextObject >= 5 {
+            nextButton.setTitle("Finish", for: .normal)
+        }else {
+            nextButton.setTitle("Next", for: .normal)
+        }
     }
-
+    
 }

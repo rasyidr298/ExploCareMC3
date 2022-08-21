@@ -65,8 +65,8 @@ extension OnBoardingViewController {
         if (loginName.text == "") {
             allert(view: self, title: "Allert", message: "name is required!")
         }else {
-            UserDefaults.standard.set(true, forKey: showOnBoard)
-            UserDefaults.standard.set(loginName.text, forKey: loginNameDef)
+            UserDefaults.standard.set(true, forKey: udIsShowOnBoardKey)
+            UserDefaults.standard.set(loginName.text, forKey: udUserNameKey)
 
             guard let window = UIApplication.shared.keyWindow else {return}
             window.rootViewController = TabExploreViewController()

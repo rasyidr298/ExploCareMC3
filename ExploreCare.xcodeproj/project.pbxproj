@@ -24,8 +24,6 @@
 		011EA9CA28656BD90078D4CD /* OnBoardingContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9C928656BD90078D4CD /* OnBoardingContentViewController.xib */; };
 		011EA9DA286704350078D4CD /* TabExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9D8286704350078D4CD /* TabExploreViewController.swift */; };
 		011EA9DB286704350078D4CD /* TabExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9D9286704350078D4CD /* TabExploreViewController.xib */; };
-		011EA9ED28671D160078D4CD /* ObjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9EB28671D160078D4CD /* ObjectTableViewCell.swift */; };
-		011EA9EE28671D160078D4CD /* ObjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9EC28671D160078D4CD /* ObjectTableViewCell.xib */; };
 		011EA9F0286843B00078D4CD /* RecognationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9EF286843B00078D4CD /* RecognationModel.swift */; };
 		011EA9FC286C4DBD0078D4CD /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9FA286C4DBD0078D4CD /* CategoryTableViewCell.swift */; };
 		011EA9FD286C4DBD0078D4CD /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9FB286C4DBD0078D4CD /* CategoryTableViewCell.xib */; };
@@ -129,8 +127,6 @@
 		011EA9C928656BD90078D4CD /* OnBoardingContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingContentViewController.xib; sourceTree = "<group>"; };
 		011EA9D8286704350078D4CD /* TabExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabExploreViewController.swift; sourceTree = "<group>"; };
 		011EA9D9286704350078D4CD /* TabExploreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabExploreViewController.xib; sourceTree = "<group>"; };
-		011EA9EB28671D160078D4CD /* ObjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTableViewCell.swift; sourceTree = "<group>"; };
-		011EA9EC28671D160078D4CD /* ObjectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectTableViewCell.xib; sourceTree = "<group>"; };
 		011EA9EF286843B00078D4CD /* RecognationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognationModel.swift; sourceTree = "<group>"; };
 		011EA9FA286C4DBD0078D4CD /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		011EA9FB286C4DBD0078D4CD /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -310,15 +306,6 @@
 			path = TabExplore;
 			sourceTree = "<group>";
 		};
-		011EA9F5286851BB0078D4CD /* ObjectCell */ = {
-			isa = PBXGroup;
-			children = (
-				011EA9EB28671D160078D4CD /* ObjectTableViewCell.swift */,
-				011EA9EC28671D160078D4CD /* ObjectTableViewCell.xib */,
-			);
-			path = ObjectCell;
-			sourceTree = "<group>";
-		};
 		011EA9F9286C4D550078D4CD /* CategoryCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,7 +335,6 @@
 		0124C7DD2864313A001A4D58 /* ObjectRecog */ = {
 			isa = PBXGroup;
 			children = (
-				011EA9F5286851BB0078D4CD /* ObjectCell */,
 				0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */,
 				011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */,
 				0157CA65288854100008B287 /* ObjectRecogViewModel.swift */,
@@ -615,7 +601,6 @@
 				01B9725128729921007F1521 /* book.mp3 in Resources */,
 				011EA9C828656B870078D4CD /* OnBoardingPageViewController.xib in Resources */,
 				01B9725028729921007F1521 /* backpack.mp3 in Resources */,
-				011EA9EE28671D160078D4CD /* ObjectTableViewCell.xib in Resources */,
 				011EA9B22864CC550078D4CD /* ObjectRecogViewController.xib in Resources */,
 				011EA9DB286704350078D4CD /* TabExploreViewController.xib in Resources */,
 				011EA9FD286C4DBD0078D4CD /* CategoryTableViewCell.xib in Resources */,
@@ -682,7 +667,6 @@
 				0124C7DF28643427001A4D58 /* DrawingBoundingBoxView.swift in Sources */,
 				0157CA66288854100008B287 /* ObjectRecogViewModel.swift in Sources */,
 				01E538D428AF744B0017BFE4 /* Category+CoreDataProperties.swift in Sources */,
-				011EA9ED28671D160078D4CD /* ObjectTableViewCell.swift in Sources */,
 				011EA9BF286564410078D4CD /* OnBoardingViewController.swift in Sources */,
 				013458B52871AE5300BCAAE6 /* FinishViewController.swift in Sources */,
 			);
