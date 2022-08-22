@@ -9,12 +9,16 @@ import UIKit
 
 class ResultModalVC: UIViewController {
     
+    // MARK: - IBOutlets and UI Components
     @IBOutlet weak var resultImage: UIImageView!
     @IBOutlet weak var objectNameLabel: UILabel!
     @IBOutlet weak var objectDescriptionLabel: UILabel!
     @IBOutlet weak var voiceOverButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
 
+    // MARK: - Variables
+    
+    // MARK: - Overriden Functions
     init() {
         super.init(nibName: "ResultModalVC", bundle: nil)
         modalPresentationStyle = .overCurrentContext
@@ -30,6 +34,7 @@ class ResultModalVC: UIViewController {
         setupUI()
     }
     
+    // MARK: - UI Setups
     private func setupUI() {
         resultImage.layer.borderColor = UIColor(hex: "#ADC6F6").cgColor
         resultImage.layer.borderWidth = 2
@@ -39,7 +44,10 @@ class ResultModalVC: UIViewController {
         attStr.append(NSAttributedString(string: "split.", attributes: [.font: UIFont.boldSystemFont(ofSize: 15), .foregroundColor: UIColor.black]))
         objectDescriptionLabel.attributedText = attStr
     }
+    
+    // MARK: - Custom Functions
 
+    // MARK: - Actions
     @IBAction func nextAction(_ sender: Any) {
         dismiss(animated: true)
     }
