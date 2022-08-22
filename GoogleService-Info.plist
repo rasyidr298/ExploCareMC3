@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>265411561858-t286hpdb8jq4brdoeeusr349p4jts1go.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.265411561858-t286hpdb8jq4brdoeeusr349p4jts1go</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCeARYUjjkXpzt_tje8gKzCkULa2kFKmcU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>265411561858</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.rahmatrizkym.explocare</string>
+	<key>PROJECT_ID</key>
+	<string>explocare</string>
+	<key>STORAGE_BUCKET</key>
+	<string>explocare.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:265411561858:ios:36c60769c5fec356a1279b</string>
+</dict>
+</plist>
