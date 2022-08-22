@@ -15,6 +15,8 @@ class LevelSectionCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var levelsCollectionView: UICollectionView!
     
+    private var selectHandler: () -> Void = {}
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCollectionView()
@@ -28,6 +30,10 @@ class LevelSectionCell: UITableViewCell {
     
     func setupContents(title: String) {
         titleLabel.text = title
+    }
+    
+    func setupSelectHandler(handler: @escaping () -> Void) {
+        selectHandler = handler
     }
     
 }
@@ -48,7 +54,7 @@ extension LevelSectionCell: UICollectionViewDelegate, UICollectionViewDelegateFl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        print("Level cell selected")
+        selectHandler()
     }
     
 }

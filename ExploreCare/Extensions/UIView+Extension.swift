@@ -16,5 +16,14 @@ extension UIView {
             self.layer.cornerRadius = newValue
         }
     }
+    
+    @IBInspectable
+    var masksToBounds: Bool {
+        get {
+            return self.layer.masksToBounds
+        } set {
+            self.layer.masksToBounds = newValue
+        }
+    }
 }
 
