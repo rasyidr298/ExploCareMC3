@@ -40,7 +40,7 @@ class LevelSectionCell: UITableViewCell {
 
 extension LevelSectionCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        Category.dataObject().count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -48,7 +48,10 @@ extension LevelSectionCell: UICollectionViewDelegate, UICollectionViewDelegateFl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let categoryistData = Category.dataObject()[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LevelCell.REUSE_IDENTIFIER, for: indexPath) as! LevelCell
+        cell.category = categoryistData
+        cell.updateCategoryCell()
         return cell
     }
     

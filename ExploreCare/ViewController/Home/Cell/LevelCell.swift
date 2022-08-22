@@ -16,8 +16,15 @@ class LevelCell: UICollectionViewCell {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    public var category: Category?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    public func updateCategoryCell() {
+        backgroundImage.image = category?.categoryImage
+        titleLabel.text = category?.categoryName
     }
 
 }

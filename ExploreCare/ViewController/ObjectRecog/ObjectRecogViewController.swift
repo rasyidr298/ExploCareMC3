@@ -21,7 +21,6 @@ class ObjectRecogViewController: UIViewController {
     @IBOutlet weak var charImageView: UIImageView!
     
     public var category: Category?
-    private var objectRecog: [ObjectRecog] = []
     private let measure = Measure()
     var player = AVService.shared
     var indexObjectRecog = 0
@@ -76,7 +75,7 @@ class ObjectRecogViewController: UIViewController {
     
     @IBAction func closeButton(_ sender: Any) {
         guard let window = UIApplication.shared.keyWindow else {return}
-        window.rootViewController = TabExploreViewController()
+        window.rootViewController = HomeVC()
         
         //push value to iwatch
         viewModel.sendMessageToIwatch(name: udUserName, time: 0, startExplore: false)

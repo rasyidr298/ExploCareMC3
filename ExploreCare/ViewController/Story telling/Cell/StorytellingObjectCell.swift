@@ -19,8 +19,10 @@ class StorytellingObjectCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setupContents(imageName: String) {
-        objectImage.image = UIImage(named: imageName)
+    func setupContents(category: Category) {
+        _ = category.object.map({ obj in
+            objectImage.image = obj.objectImage
+        })
     }
 
 }

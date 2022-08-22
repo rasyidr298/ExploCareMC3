@@ -21,6 +21,8 @@ class StorytellingVC: UIViewController {
     
     @IBOutlet weak var objectsCollectionView: UICollectionView!
     
+    var category: Category?
+    
     // MARK: - Variables
 
     // MARK: - Overriden Functions
@@ -44,6 +46,8 @@ class StorytellingVC: UIViewController {
         objectsCollectionView.dataSource = self
         objectsCollectionView.allowsSelection = false
         objectsCollectionView.register(UINib(nibName: "StorytellingObjectCell", bundle: nil), forCellWithReuseIdentifier: StorytellingObjectCell.REUSE_IDENTIFIER)
+        levelDescriptionLabel.text = category?.storyTellingText
+        levelNameLabel.text = category?.categoryName
     }
     
     // MARK: - Custom Functions
@@ -54,14 +58,17 @@ class StorytellingVC: UIViewController {
     }
     
     @IBAction func startAction(_ sender: Any) {
-        
+        guard let window = UIApplication.shared.keyWindow else {return}
+        let vc = ObjectRecogViewController()
+        vc.category = category
+        window.rootViewController = vc
     }
 }
 
 // MARK: - Collection view delegate and data source
 extension StorytellingVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        (category?.object.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -70,7 +77,7 @@ extension StorytellingVC: UICollectionViewDelegate, UICollectionViewDelegateFlow
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StorytellingObjectCell.REUSE_IDENTIFIER, for: indexPath) as! StorytellingObjectCell
-        cell.setupContents(imageName: "ic_backpack")
+        cell.setupContents(category: category!)
         return cell
     }
     

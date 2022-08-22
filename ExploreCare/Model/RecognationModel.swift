@@ -45,7 +45,7 @@ func storyTelling(type: String) -> String {
 extension Category {
     static func dataObject() -> [Category] {
         return [
-            Category(categoryName: "Living Room", categoryImage: UIImage(named: "ic_livingroom")!, isLockLevel: false, storyTellingText: storyTelling(type: "livingroom"), charImage: UIImage(named: "ic_char_manda")!, object: [
+            Category(categoryName: "Living Room", categoryImage: UIImage(named: "background_livingroom")!, isLockLevel: false, storyTellingText: storyTelling(type: "livingroom"), charImage: UIImage(named: "ic_char_manda")!, object: [
                 ObjectRecog(name: "Chair", objectName: "chair", descriptionName: "Manda hangs her jacket over the chair.", objectImage: UIImage(named: "ic_chair")!, objectImageLabel: UIImage(named: "ic_chair_label")!),
                 ObjectRecog(name: "Sofa", objectName: "sofa", descriptionName: "Manda's cat loves to sleep on the sofa.", objectImage: UIImage(named: "ic_sofa")!, objectImageLabel: UIImage(named: "ic_sofa_label")!),
                 ObjectRecog(name: "Remote", objectName: "remote", descriptionName: "Manda lost her TV remote between the sofa.", objectImage: UIImage(named: "ic_remote")!, objectImageLabel: UIImage(named: "ic_remote_label")!),
@@ -53,7 +53,7 @@ extension Category {
                 ObjectRecog(name: "Clock", objectName: "clock", descriptionName: "The clock shows Manda that it’s noon.", objectImage: UIImage(named: "ic_clock")!, objectImageLabel: UIImage(named: "ic_clock_label")!)
             ]),
             
-            Category(categoryName: "Kitchen", categoryImage: UIImage(named: "ic_kitchen")!, isLockLevel: false, storyTellingText: storyTelling(type: "kitchen"), charImage: UIImage(named: "ic_char_tep")!, object: [
+            Category(categoryName: "Kitchen", categoryImage: UIImage(named: "background_kitchen")!, isLockLevel: false, storyTellingText: storyTelling(type: "kitchen"), charImage: UIImage(named: "ic_char_tep")!, object: [
                 ObjectRecog(name: "Refrigerator", objectName: "refrigerator", descriptionName: "Tep keeps her leftovers in the refrigerator.", objectImage: UIImage(named: "ic_refrigerator")!, objectImageLabel: UIImage(named: "ic_refrigerator")!),
                 ObjectRecog(name: "Cup", objectName: "cup", descriptionName: "Tep fills the cup with apple juice.", objectImage: UIImage(named: "ic_cup")!, objectImageLabel: UIImage(named: "ic_cup_label")!),
                 ObjectRecog(name: "Fork", objectName: "fork", descriptionName: "Tep eats steak with fork and knife.", objectImage: UIImage(named: "ic_fork")!, objectImageLabel: UIImage(named: "ic_fork_label")!),
@@ -61,7 +61,7 @@ extension Category {
                 ObjectRecog(name: "Bowl", objectName: "bowl", descriptionName: "Tep eats chicken soup from a bowl.", objectImage: UIImage(named: "ic_bowl")!, objectImageLabel: UIImage(named: "ic_bowl_label")!)
             ]),
             
-            Category(categoryName: "Bedroom", categoryImage: UIImage(named: "ic_bedroom")!, isLockLevel: false, storyTellingText: storyTelling(type: "bedroom"), charImage: UIImage(named: "ic_char_iky")!, object: [
+            Category(categoryName: "Bedroom", categoryImage: UIImage(named: "background_bedroom")!, isLockLevel: false, storyTellingText: storyTelling(type: "bedroom"), charImage: UIImage(named: "ic_char_iky")!, object: [
                 ObjectRecog(name: "Clock", objectName: "clock", descriptionName: "Iky bought a new clock yesterday.", objectImage: UIImage(named: "ic_clock")!, objectImageLabel: UIImage(named: "ic_clock_label")!),
                 ObjectRecog(name: "Laptop", objectName: "laptop", descriptionName: "Iky is turning off his laptop.", objectImage: UIImage(named: "ic_laptop")!, objectImageLabel: UIImage(named: "ic_laptop_label")!),
                 ObjectRecog(name: "Backpack", objectName: "backpack", descriptionName: "Iky puts his sandwich in the backpack.", objectImage: UIImage(named: "ic_backpack")!, objectImageLabel: UIImage(named: "ic_backpack_label")!),
@@ -69,7 +69,7 @@ extension Category {
                 ObjectRecog(name: "Book", objectName: "book", descriptionName: "Iky loves to read his comic book.", objectImage: UIImage(named: "ic_book")!, objectImageLabel: UIImage(named: "ic_book_label")!)
             ]),
             
-            Category(categoryName: "Garden", categoryImage: UIImage(named: "ic_garden")!, isLockLevel: false, storyTellingText: storyTelling(type: "garden"), charImage: UIImage(named: "ic_char_rass")!, object: [
+            Category(categoryName: "Garden", categoryImage: UIImage(named: "background_garden")!, isLockLevel: false, storyTellingText: storyTelling(type: "garden"), charImage: UIImage(named: "ic_char_rass")!, object: [
                 ObjectRecog(name: "Potted Plant", objectName: "pottedplant", descriptionName: "Rass is taking care of his potted plant.", objectImage: UIImage(named: "ic_pottedplant")!, objectImageLabel: UIImage(named: "ic_pottedplant_label")!),
                 ObjectRecog(name: "Vase", objectName: "vase", descriptionName: "Rass just bought a new flower vase.", objectImage: UIImage(named: "ic_vase")!, objectImageLabel: UIImage(named: "ic_vase_label")!),
                 ObjectRecog(name: "Ball", objectName: "sportsball", descriptionName: "Rass got a new soccer ball on his birthday.", objectImage: UIImage(named: "ic_sportsball")!, objectImageLabel: UIImage(named: "ic_sportsball_label")!),
@@ -77,7 +77,7 @@ extension Category {
                 ObjectRecog(name: "Umbrella", objectName: "umbrella", descriptionName: "Rass has a colorful umbrella. ", objectImage: UIImage(named: "ic_umbrella")!, objectImageLabel: UIImage(named: "ic_umbrella_label")!)
             ]),
             
-            Category(categoryName: "Zoo", categoryImage: UIImage(named: "ic_zoo")!, isLockLevel: false, storyTellingText: storyTelling(type: "zoo"), charImage: UIImage(named: "ic_char_manda")!, object: [
+            Category(categoryName: "Zoo", categoryImage: UIImage(named: "background_zoo")!, isLockLevel: false, storyTellingText: storyTelling(type: "zoo"), charImage: UIImage(named: "ic_char_manda")!, object: [
                 ObjectRecog(name: "Bear", objectName: "bear", descriptionName: "Manda sees the big sleeping bear.", objectImage: UIImage(named: "ic_bear")!, objectImageLabel: UIImage(named: "ic_bear_label")!),
                 ObjectRecog(name: "Zebra", objectName: "zebra", descriptionName: "Manda loves petting the baby zebra.  ", objectImage: UIImage(named: "ic_zebra")!, objectImageLabel: UIImage(named: "ic_zebra_label")!),
                 ObjectRecog(name: "Bird", objectName: "bird", descriptionName: "Manda watches a colorful bird show.", objectImage: UIImage(named: "ic_bird")!, objectImageLabel: UIImage(named: "ic_bird_label")!),
@@ -85,7 +85,7 @@ extension Category {
                 ObjectRecog(name: "Giraffe", objectName: "giraffe", descriptionName: "Manda waves at the giraffe.", objectImage: UIImage(named: "ic_giraffe")!, objectImageLabel: UIImage(named: "ic_giraffe_label")!)
             ]),
             
-            Category(categoryName: "Food", categoryImage: UIImage(named: "ic_food")!, isLockLevel: false, storyTellingText: storyTelling(type: "food"), charImage: UIImage(named: "ic_char_tep")!, object: [
+            Category(categoryName: "Food", categoryImage: UIImage(named: "background_food")!, isLockLevel: false, storyTellingText: storyTelling(type: "food"), charImage: UIImage(named: "ic_char_tep")!, object: [
                 ObjectRecog(name: "Banana", objectName: "banana", descriptionName: "Tep orders a banana split.", objectImage: UIImage(named: "ic_banana")!, objectImageLabel: UIImage(named: "ic_banana_label")!),
                 ObjectRecog(name: "Apple", objectName: "apple", descriptionName: "Tep gives apple to her teacher.", objectImage: UIImage(named: "ic_apple")!, objectImageLabel: UIImage(named: "ic_apple_label")!),
                 ObjectRecog(name: "Orange", objectName: "orange", descriptionName: "Tep drinks orange juice for breakfast.", objectImage: UIImage(named: "ic_orange")!, objectImageLabel: UIImage(named: "ic_orange_label")!),
@@ -93,7 +93,7 @@ extension Category {
                 ObjectRecog(name: "Broccoli", objectName: "broccoli", descriptionName: "Tep loves her broccoli soup.", objectImage: UIImage(named: "ic_broccoli")!, objectImageLabel: UIImage(named: "ic_broccoli_label")!)
             ]),
             
-            Category(categoryName: "Vehicles", categoryImage: UIImage(named: "ic_vehicle")!, isLockLevel: false, storyTellingText: storyTelling(type: "vehicles"), charImage: UIImage(named: "ic_char_iky")!, object: [
+            Category(categoryName: "Vehicles", categoryImage: UIImage(named: "background_vehicle")!, isLockLevel: false, storyTellingText: storyTelling(type: "vehicles"), charImage: UIImage(named: "ic_char_iky")!, object: [
                 ObjectRecog(name: "Bus", objectName: "bus", descriptionName: "Iky takes the bus to school.", objectImage: UIImage(named: "ic_bus")!, objectImageLabel: UIImage(named: "ic_bus_label")!),
                 ObjectRecog(name: "Truck", objectName: "truck", descriptionName: "Iky loves playing with his toy truck.", objectImage: UIImage(named: "ic_truck")!, objectImageLabel: UIImage(named: "ic_truck_label")!),
                 ObjectRecog(name: "Bicycle", objectName: "bicycle", descriptionName: "Iky goes to the park with his bicycle.", objectImage: UIImage(named: "ic_bicycle")!, objectImageLabel: UIImage(named: "ic_bicycle_label")!),

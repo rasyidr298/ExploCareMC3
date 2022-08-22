@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -12,6 +11,7 @@
             <connections>
                 <outlet property="helpButton" destination="Mgs-u6-3nT" id="8qx-uE-CDi"/>
                 <outlet property="levelTableView" destination="DIG-9e-Raa" id="Kmd-t5-bma"/>
+                <outlet property="nameLabel" destination="Nlg-bz-9c9" id="x7g-KI-PuF"/>
                 <outlet property="soundStateButton" destination="yTD-QU-Zcl" id="a9y-Os-Wx4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -129,7 +129,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="3zK-sv-kbF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9d4-UZ-Mix"/>
                 <constraint firstItem="pCS-cO-oiK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Cao-B8-bS7"/>
@@ -149,8 +149,5 @@
         <image name="ic_user_logo" width="84" height="84"/>
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <image name="speaker.wave.2.fill" catalog="system" width="128" height="90"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

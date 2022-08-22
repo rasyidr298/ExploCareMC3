@@ -12,6 +12,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var soundStateButton: UIButton!
     @IBOutlet weak var helpButton: UIButton!
     @IBOutlet weak var levelTableView: UITableView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     init() {
         super.init(nibName: "HomeVC", bundle: nil)
@@ -31,10 +32,11 @@ class HomeVC: UIViewController {
         levelTableView.dataSource = self
         levelTableView.allowsSelection = false
         levelTableView.register(UINib(nibName: "LevelSectionCell", bundle: nil), forCellReuseIdentifier: LevelSectionCell.REUSE_IDENTIFIER)
+        nameLabel.text = udUserName
     }
     
     @IBAction private func soundStateAction(_ sender: Any) {
-
+        
     }
     
     @IBAction private func helpAction(_ sender: Any) {
@@ -52,7 +54,9 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: LevelSectionCell.REUSE_IDENTIFIER) as! LevelSectionCell
         cell.setupContents(title: indexPath.row == 0 ? "Finding the object" : "Have an adventure")
         cell.setupSelectHandler { [unowned self] in
-            self.present(StorytellingVC(), animated: true)
+            let vc = StorytellingVC()
+            vc.category = Category.dataObject().first
+            self.present(vc, animated: true)
         }
         return cell
     }
