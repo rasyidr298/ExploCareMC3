@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultModalVC" customModule="ExploCare_ARKit" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultModalVC" customModule="ExploreCare" customModuleProvider="target">
             <connections>
                 <outlet property="nextButton" destination="ZHJ-kE-L8K" id="3Kp-vQ-ebe"/>
                 <outlet property="objectDescriptionLabel" destination="7eG-0G-U4G" id="uey-mX-ke5"/>
@@ -71,6 +71,9 @@
                                                     <real key="value" value="15"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="voiceOverAction:" destination="-1" eventType="touchUpInside" id="PRa-lx-TzU"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>

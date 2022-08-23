@@ -21,14 +21,14 @@ class StorytellingVC: UIViewController {
     
     @IBOutlet weak var objectsCollectionView: UICollectionView!
     
-    var category: Category?
-    
     // MARK: - Variables
+    private var category: Category?
 
     // MARK: - Overriden Functions
-    init() {
+    init(category: Category?) {
         super.init(nibName: "StorytellingVC", bundle: nil)
         modalPresentationStyle = .overCurrentContext
+        self.category = category
     }
     
     required init?(coder: NSCoder) {
@@ -47,7 +47,7 @@ class StorytellingVC: UIViewController {
         objectsCollectionView.allowsSelection = false
         objectsCollectionView.register(UINib(nibName: "StorytellingObjectCell", bundle: nil), forCellWithReuseIdentifier: StorytellingObjectCell.REUSE_IDENTIFIER)
         levelDescriptionLabel.text = category?.storyTellingText
-        levelNameLabel.text = category?.categoryName
+        levelNameLabel.text = "  \(category?.categoryName ?? "")  "
     }
     
     // MARK: - Custom Functions
@@ -58,10 +58,11 @@ class StorytellingVC: UIViewController {
     }
     
     @IBAction func startAction(_ sender: Any) {
-        guard let window = UIApplication.shared.keyWindow else {return}
+        dismiss(animated: true)
+        
         let vc = ObjectRecogViewController()
         vc.category = category
-        window.rootViewController = vc
+        (presentingViewController as? UINavigationController)?.pushViewController(vc, animated: true)
     }
 }
 
