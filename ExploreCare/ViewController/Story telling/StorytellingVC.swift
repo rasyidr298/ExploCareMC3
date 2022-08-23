@@ -78,7 +78,7 @@ extension StorytellingVC: UICollectionViewDelegate, UICollectionViewDelegateFlow
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StorytellingObjectCell.REUSE_IDENTIFIER, for: indexPath) as! StorytellingObjectCell
-        cell.setupContents(category: category!)
+        cell.setupContents(object: (category?.object[indexPath.row])!)
         return cell
     }
     

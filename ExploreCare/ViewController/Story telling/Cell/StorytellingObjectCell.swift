@@ -19,10 +19,14 @@ class StorytellingObjectCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setupContents(category: Category) {
-        _ = category.object.map({ obj in
-            objectImage.image = obj.objectImage
-        })
+    func setupContents(object: ObjectRecog) {
+        objectImage.image = object.objectImage
+//        objectImage.image = category.object[2].objectImage
+//        objectImage.image = category.object[3].objectImage
+//        objectImage.image = category.object[4].objectImage
+//        _ = category.object.map({ obj in
+//            objectImage.image = obj.objectImage
+//        })
     }
 
 }

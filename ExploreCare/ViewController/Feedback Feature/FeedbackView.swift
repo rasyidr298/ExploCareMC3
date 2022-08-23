@@ -6,29 +6,56 @@
 //
 
 import SwiftUI
+import ConfettiSwiftUI
 
 struct FeedbackView: View {
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     @State var heightMainView = UIScreen.main.bounds.height
     @State var widthMainView = UIScreen.main.bounds.width
+    @State private var counter: Int = 10
     @State var object: [ObjectRecog] = []
     
     var body: some View {
-        // MARK: Carousel
-        VStack {
-            Spacer()
-            Text("")
-            Text("")
-            Text("You found all the things!")
-            Carousel(cardWidth: widthMainView, spacing: -450) {
-                ForEach(object) {obj in
-                    CarouselCardModif {
-                        CarouselCard(item: obj).onTapGesture {
-//                            print(obj.objectImage.description.description)
+        ZStack {
+            VStack {
+                Text("\n\nWell done! We are proud of you!\n")
+                    .foregroundColor(Color("green"))
+                    .font(.system(size: 26, weight: .bold, design: .rounded))
+                
+                Carousel(cardWidth: widthMainView, spacing: -530) {
+                    ForEach(object) {obj in
+                        CarouselCardModif {
+                            CarouselCard(item: obj).onTapGesture {
+                                //playsound
+                            }
                         }
                     }
                 }
             }
+            
+            Image(systemName: "x.square.fill")
+                .resizable()
+                .frame(width: 40, height: 40, alignment: .center)
+                .cornerRadius(12)
+                .foregroundColor(.red)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 20))
+                .onTapGesture {
+                    //to home vc
+                }
         }
+        .background(
+            Image("bg_feedback")
+                .resizable()
+        )
+        .edgesIgnoringSafeArea(.all)
+        .onReceive(timer) { _ in
+            if counter > 0 {
+                counter -= 1
+            }
+        }
+        .confettiCannon(counter: $counter, num: 50, openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 400)
     }
 }
 

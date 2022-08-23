@@ -9,25 +9,39 @@ import SwiftUI
 
 struct CarouselCard: View {
     var item: ObjectRecog
-    @State var heightMainView = UIScreen.main.bounds.height
-    @State var widthMainView = UIScreen.main.bounds.width
     
     var body: some View {
-        
-        ZStack(alignment: .bottomLeading) {
+        VStack {
             Image(item.objectImageString)
                 .resizable()
-                .frame(width: 400, height: (heightMainView - 120))
+                .frame(width: 100, height: 100, alignment: .center)
                 .aspectRatio(contentMode: .fill)
-            
-            Text(item.objectName)
-                .font(.callout)
-                .bold()
-                .foregroundColor(.black)
-                .multilineTextAlignment(.leading)
-                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
-            
+            HStack {
+                Text(item.name)
+                    .font(.system(size: 22, weight: .bold, design: .rounded))
+                    .foregroundColor(Color.black)
+                Image("ic_speaker")
+                    .resizable()
+                    .frame(width: 30, height: 30, alignment: .center)
+                    .aspectRatio(contentMode: .fill)
+            }
+            Text(item.descriptionName)
+                .font(.system(size: 14, weight: .bold, design: .rounded))
+                .foregroundColor(Color.black)
         }
-        .clipShape(CustomShape(corner: [.allCorners], radius: 20))
+        .background(
+            Image("bg_feedbackitem")
+                .resizable()
+                .frame(width: 370, height: 270, alignment: .center)
+                .shadow(color: Color.gray, radius: 7, x: 0, y: 0)
+        )
+    }
+}
+
+
+struct CarouselCard_Previews: PreviewProvider {
+    static var previews: some View {
+        CarouselCard(item: ObjectRecog(id: 1, name: "Chair", objectName: "chair", descriptionName: "Manda hangs her jacket over the chair", objectImage: UIImage(named: "ic_chair")!, objectImageString: "ic_chair", objectImageLabel: UIImage(named: "ic_chair_label")!))
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }
