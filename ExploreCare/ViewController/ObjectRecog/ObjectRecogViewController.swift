@@ -5,8 +5,8 @@
 //  Created by Rasyid Ridla on 23/06/22.
 //
 
-import SwiftUI
 import UIKit
+import SwiftUI
 import Vision
 import AVFoundation
 
@@ -75,8 +75,7 @@ class ObjectRecogViewController: UIViewController {
     }
     
     @IBAction func closeButton(_ sender: Any) {
-        guard let window = UIApplication.shared.keyWindow else {return}
-        window.rootViewController = HomeVC()
+        navigationController?.popViewController(animated: true)
         
         //push value to iwatch
         viewModel.sendMessageToIwatch(name: udUserName, time: 0, startExplore: false)
@@ -174,10 +173,7 @@ extension ObjectRecogViewController: CustomAlertDelegate {
             guideObjectName.text = category!.object[indexObjectRecog].name
             objectImageView.image = (category?.object[0].objectImage)!
             
-            //to feedback page
-            guard let window = UIApplication.shared.keyWindow else {return}
-            let feedbackView = UIHostingController(rootView: FeedbackView(object: category!.object))
-            window.rootViewController = feedbackView
+            //to celebrate viewcontroller
         }else {
             guideDescLabel.text = "\(textFirstGuide()), let's find "
             guideObjectName.text = category!.object[indexObjectRecog].name
@@ -189,6 +185,35 @@ extension ObjectRecogViewController: CustomAlertDelegate {
     
     func onSpeakerButttonPressed(_ alert: CustomAllertViewController, objectRecog: ObjectRecog) {
         playObjectSound(player: player, objectRecog: objectRecog)
+    }
+}
+
+extension ObjectRecogViewController: ResultModalDelegate {
+    func onNextButttonPressed() {
+        timer.invalidate()
+        stopConfetti()
+        
+        if indexObjectRecog >= 5 {
+            indexObjectRecog = 0
+            guideDescLabel.text = "\(textFirstGuide()), let's find "
+            guideObjectName.text = category!.object[indexObjectRecog].name
+            objectImageView.image = (category?.object[0].objectImage)!
+            
+            //to celebrate viewcontroller
+            //to feedback page
+            let feedbackView = UIHostingController(rootView: FeedbackView(object: category!.object))
+            navigationController?.pushViewController(feedbackView, animated: true)
+        }else {
+            guideDescLabel.text = "\(textFirstGuide()), let's find "
+            guideObjectName.text = category!.object[indexObjectRecog].name
+            objectImageView.image = (category?.object[indexObjectRecog].objectImage)!
+        }
+        
+        viewModel.sendMessageToIwatch(name: udUserName, time: 0, startExplore: true)
+    }
+    
+    func onSpeakerButttonPressed(object: ObjectRecog) {
+        playObjectSound(player: player, objectRecog: object)
     }
 }
 
@@ -229,6 +254,7 @@ extension ObjectRecogViewController {
         view.addSubview(confettiView)
     }
     
+    @available(*, deprecated, renamed: "showResultModal(object:)")
     func showCustomAllert(objectRecog: ObjectRecog) {
         let customAllert = CustomAllertViewController()
         customAllert.objectRecog = objectRecog
@@ -237,10 +263,16 @@ extension ObjectRecogViewController {
         customAllert.show()
     }
     
+    func showResultModal(object: ObjectRecog) {
+        let resultModal = ResultModalVC(object: object, index: indexObjectRecog)
+        resultModal.delegate = self
+        present(resultModal, animated: true)
+    }
+    
     func matchingObject(objectRecog: ObjectRecog) {
-        DispatchQueue.main.async { [self] in
+        DispatchQueue.main.async { [unowned self] in
             showConfetti()
-            showCustomAllert(objectRecog: objectRecog)
+            showResultModal(object: objectRecog)
             playAdditionalSound(player: player, type: "correct")
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
             

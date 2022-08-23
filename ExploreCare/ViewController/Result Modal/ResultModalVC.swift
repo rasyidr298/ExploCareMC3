@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol ResultModalDelegate: AnyObject {
+    func onNextButttonPressed()
+    func onSpeakerButttonPressed(object: ObjectRecog)
+}
+
 class ResultModalVC: UIViewController {
     
     // MARK: - IBOutlets and UI Components
@@ -17,12 +22,19 @@ class ResultModalVC: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
 
     // MARK: - Variables
+    weak var delegate: ResultModalDelegate?
+    
+    private var object: ObjectRecog!
+    private var index: Int!
     
     // MARK: - Overriden Functions
-    init() {
+    init(object: ObjectRecog, index: Int) {
         super.init(nibName: "ResultModalVC", bundle: nil)
         modalPresentationStyle = .overCurrentContext
         modalTransitionStyle = .crossDissolve
+        
+        self.object = object
+        self.index = index
     }
     
     required init?(coder: NSCoder) {
@@ -36,19 +48,27 @@ class ResultModalVC: UIViewController {
     
     // MARK: - UI Setups
     private func setupUI() {
-        resultImage.layer.borderColor = UIColor(hex: "#ADC6F6").cgColor
-        resultImage.layer.borderWidth = 2
+        resultImage.image = object.objectImage
         
-        let attStr = NSMutableAttributedString(string: "Tep orders a", attributes: [.font: UIFont.boldSystemFont(ofSize: 15), .foregroundColor: UIColor.black])
-        attStr.append(NSAttributedString(string: " banana ", attributes: [.font: UIFont.boldSystemFont(ofSize: 15), .foregroundColor: UIColor(hex: "#5B8DEE")]))
-        attStr.append(NSAttributedString(string: "split.", attributes: [.font: UIFont.boldSystemFont(ofSize: 15), .foregroundColor: UIColor.black]))
-        objectDescriptionLabel.attributedText = attStr
+        objectNameLabel.text = object.objectName.capitalized
+        objectDescriptionLabel.text = object.descriptionName
+        
+        if index == 5 {
+            nextButton.setTitle("Finish", for: .normal)
+        }
     }
     
     // MARK: - Custom Functions
 
     // MARK: - Actions
     @IBAction func nextAction(_ sender: Any) {
-        dismiss(animated: true)
+        dismiss(animated: true) { [unowned self] in
+            delegate?.onNextButttonPressed()
+        }
     }
+    
+    @IBAction func voiceOverAction(_ sender: Any) {
+        delegate?.onSpeakerButttonPressed(object: object)
+    }
+    
 }

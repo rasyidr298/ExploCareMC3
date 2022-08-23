@@ -53,9 +53,8 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LevelSectionCell.REUSE_IDENTIFIER) as! LevelSectionCell
         cell.setupContents(title: indexPath.row == 0 ? "Finding the object" : "Have an adventure")
-        cell.setupSelectHandler { [unowned self] in
-            let vc = StorytellingVC()
-            vc.category = Category.dataObject().first
+        cell.setupSelectHandler { [unowned self] category in
+            let vc = StorytellingVC(category: category)
             self.present(vc, animated: true)
         }
         return cell
