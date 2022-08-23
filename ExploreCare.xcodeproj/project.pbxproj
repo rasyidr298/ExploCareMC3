@@ -56,6 +56,14 @@
 		0186D114287FC2C0006540C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0186D113287FC2C0006540C1 /* Preview Assets.xcassets */; };
 		0186D119287FC2C0006540C1 /* ExploreCare.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0186D0F9287FC2BE006540C1 /* ExploreCare.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		01AE7ECB28B48E8500CDB9CE /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 01AE7ECA28B48E8500CDB9CE /* ConfettiSwiftUI */; };
+		01AE7ED228B50CDC00CDB9CE /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AE7ED028B50CDC00CDB9CE /* TutorialPageViewController.swift */; };
+		01AE7ED328B50CDC00CDB9CE /* TutorialPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AE7ED128B50CDC00CDB9CE /* TutorialPageViewController.xib */; };
+		01AE7ED628B50CF700CDB9CE /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AE7ED428B50CF700CDB9CE /* TutorialViewController.swift */; };
+		01AE7ED728B50CF700CDB9CE /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AE7ED528B50CF700CDB9CE /* TutorialViewController.xib */; };
+		01AE7EDA28B50D1300CDB9CE /* TutorialContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AE7ED828B50D1300CDB9CE /* TutorialContentViewController.swift */; };
+		01AE7EDB28B50D1300CDB9CE /* TutorialContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AE7ED928B50D1300CDB9CE /* TutorialContentViewController.xib */; };
+		01AE7EDF28B527FE00CDB9CE /* ResultTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AE7EDD28B527FE00CDB9CE /* ResultTutorialViewController.swift */; };
+		01AE7EE028B527FE00CDB9CE /* ResultTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AE7EDE28B527FE00CDB9CE /* ResultTutorialViewController.xib */; };
 		01B972482872851A007F1521 /* correct.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 01B972472872851A007F1521 /* correct.aiff */; };
 		01B9724F28729921007F1521 /* cup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724928729920007F1521 /* cup.mp3 */; };
 		01B9725028729921007F1521 /* backpack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724A28729920007F1521 /* backpack.mp3 */; };
@@ -182,6 +190,14 @@
 		0186D113287FC2C0006540C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0186D115287FC2C0006540C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0186D116287FC2C0006540C1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		01AE7ED028B50CDC00CDB9CE /* TutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		01AE7ED128B50CDC00CDB9CE /* TutorialPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialPageViewController.xib; sourceTree = "<group>"; };
+		01AE7ED428B50CF700CDB9CE /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		01AE7ED528B50CF700CDB9CE /* TutorialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialViewController.xib; sourceTree = "<group>"; };
+		01AE7ED828B50D1300CDB9CE /* TutorialContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialContentViewController.swift; sourceTree = "<group>"; };
+		01AE7ED928B50D1300CDB9CE /* TutorialContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialContentViewController.xib; sourceTree = "<group>"; };
+		01AE7EDD28B527FE00CDB9CE /* ResultTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTutorialViewController.swift; sourceTree = "<group>"; };
+		01AE7EDE28B527FE00CDB9CE /* ResultTutorialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTutorialViewController.xib; sourceTree = "<group>"; };
 		01B972472872851A007F1521 /* correct.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = correct.aiff; sourceTree = "<group>"; };
 		01B9724928729920007F1521 /* cup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cup.mp3; sourceTree = "<group>"; };
 		01B9724A28729920007F1521 /* backpack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backpack.mp3; sourceTree = "<group>"; };
@@ -453,6 +469,7 @@
 		01554D47286171C0008AEA27 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				01AE7ECC28B50B4900CDB9CE /* Tutorial */,
 				014093E628B34A6300B6BF54 /* Feedback Feature */,
 				B84E36AA28B34873004A3087 /* Story telling */,
 				B84C9DBB28B3272A0067E305 /* Result Modal */,
@@ -526,6 +543,53 @@
 				0186D113287FC2C0006540C1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		01AE7ECC28B50B4900CDB9CE /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				01AE7EDC28B527E100CDB9CE /* Result */,
+				01AE7ECF28B50CBD00CDB9CE /* Content */,
+				01AE7ECE28B50CBA00CDB9CE /* View */,
+				01AE7ECD28B50CB500CDB9CE /* Page */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		01AE7ECD28B50CB500CDB9CE /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				01AE7ED028B50CDC00CDB9CE /* TutorialPageViewController.swift */,
+				01AE7ED128B50CDC00CDB9CE /* TutorialPageViewController.xib */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		01AE7ECE28B50CBA00CDB9CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01AE7ED428B50CF700CDB9CE /* TutorialViewController.swift */,
+				01AE7ED528B50CF700CDB9CE /* TutorialViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01AE7ECF28B50CBD00CDB9CE /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				01AE7ED828B50D1300CDB9CE /* TutorialContentViewController.swift */,
+				01AE7ED928B50D1300CDB9CE /* TutorialContentViewController.xib */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		01AE7EDC28B527E100CDB9CE /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				01AE7EDD28B527FE00CDB9CE /* ResultTutorialViewController.swift */,
+				01AE7EDE28B527FE00CDB9CE /* ResultTutorialViewController.xib */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		01B972552872B233007F1521 /* CustomAllert */ = {
@@ -727,16 +791,20 @@
 				011EA9DB286704350078D4CD /* TabExploreViewController.xib in Resources */,
 				011EA9FD286C4DBD0078D4CD /* CategoryTableViewCell.xib in Resources */,
 				01B9725228729921007F1521 /* clock.mp3 in Resources */,
+				01AE7EE028B527FE00CDB9CE /* ResultTutorialViewController.xib in Resources */,
 				B84E36B028B3495E004A3087 /* LaunchScreen.storyboard in Resources */,
 				01B9725328729921007F1521 /* laptop.mp3 in Resources */,
 				01B9725428729921007F1521 /* tv.mp3 in Resources */,
 				011EA9B7286562580078D4CD /* OnBoardingViewController.xib in Resources */,
 				011EA9CA28656BD90078D4CD /* OnBoardingContentViewController.xib in Resources */,
+				01AE7ED328B50CDC00CDB9CE /* TutorialPageViewController.xib in Resources */,
 				B84E36AE28B34887004A3087 /* StorytellingVC.xib in Resources */,
 				B84C9DBE28B3272A0067E305 /* ResultModalVC.xib in Resources */,
+				01AE7EDB28B50D1300CDB9CE /* TutorialContentViewController.xib in Resources */,
 				013458B62871AE5300BCAAE6 /* FinishViewController.xib in Resources */,
 				B84C9DB728B327210067E305 /* LevelSectionCell.xib in Resources */,
 				01554D3D2861715A008AEA27 /* Assets.xcassets in Resources */,
+				01AE7ED728B50CF700CDB9CE /* TutorialViewController.xib in Resources */,
 				B84C9DB928B327210067E305 /* HomeVC.xib in Resources */,
 				B84C9DB528B327210067E305 /* LevelCell.xib in Resources */,
 				01B9724F28729921007F1521 /* cup.mp3 in Resources */,
@@ -788,14 +856,18 @@
 				01E538E328B2AB840017BFE4 /* AVServices.swift in Sources */,
 				01E538D328AF744B0017BFE4 /* Category+CoreDataClass.swift in Sources */,
 				0124C7E3286435C0001A4D58 /* Measure.swift in Sources */,
+				01AE7EDF28B527FE00CDB9CE /* ResultTutorialViewController.swift in Sources */,
 				0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */,
 				0124C7E12864355E001A4D58 /* ViewCapture.swift in Sources */,
 				011EA9F0286843B00078D4CD /* RecognationModel.swift in Sources */,
+				01AE7ED628B50CF700CDB9CE /* TutorialViewController.swift in Sources */,
 				011EA9C52865653F0078D4CD /* Constans.swift in Sources */,
 				01E538D228AF744B0017BFE4 /* Item+CoreDataProperties.swift in Sources */,
+				01AE7ED228B50CDC00CDB9CE /* TutorialPageViewController.swift in Sources */,
 				011EAA01286D9D100078D4CD /* View.swift in Sources */,
 				014093EE28B34B7100B6BF54 /* Carousel.swift in Sources */,
 				0124C7D62862FC9E001A4D58 /* YOLOv3Tiny.mlmodel in Sources */,
+				01AE7EDA28B50D1300CDB9CE /* TutorialContentViewController.swift in Sources */,
 				01554D3428617159008AEA27 /* AppDelegate.swift in Sources */,
 				B843735428B3C63400A8A19E /* StorytellingObjectCell.swift in Sources */,
 				01B972582872B25E007F1521 /* CustomAllertViewController.swift in Sources */,

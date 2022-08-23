@@ -19,6 +19,7 @@ class CustomAllertViewController: UIViewController {
     @IBOutlet weak var objectImage: UIImageView!
     @IBOutlet weak var objectNameLabel: UILabel!
     
+    var isTutorial = false
     var objectRecog: ObjectRecog?
     var indextObject = 0
     
@@ -37,7 +38,7 @@ class CustomAllertViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("yuhuuuuuu ",isTutorial)
         setupView()
     }
     
@@ -64,7 +65,7 @@ class CustomAllertViewController: UIViewController {
         objectNameLabel.text = objectRecog?.objectName
         objectImage.image = objectRecog?.objectImage
         
-        if indextObject >= 5 {
+        if indextObject >= 5 || isTutorial {
             nextButton.setTitle("Finish", for: .normal)
         }else {
             nextButton.setTitle("Next", for: .normal)

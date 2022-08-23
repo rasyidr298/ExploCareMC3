@@ -25,6 +25,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        updateView()
     }
     
     private func setupTableView() {
@@ -32,6 +33,7 @@ class HomeVC: UIViewController {
         levelTableView.dataSource = self
         levelTableView.allowsSelection = false
         levelTableView.register(UINib(nibName: "LevelSectionCell", bundle: nil), forCellReuseIdentifier: LevelSectionCell.REUSE_IDENTIFIER)
+        
         nameLabel.text = udUserName
     }
     
@@ -40,7 +42,17 @@ class HomeVC: UIViewController {
     }
     
     @IBAction private func helpAction(_ sender: Any) {
-        
+        let vc = TutorialViewController()
+        vc.category = Category.dataObject().first
+        self.present(vc, animated: true)
+    }
+    
+    func updateView() {
+        if udIsShowTutorial {
+            helpButton.isHidden = false
+        }else {
+            helpButton.isHidden = true
+        }
     }
     
 }
@@ -54,8 +66,14 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: LevelSectionCell.REUSE_IDENTIFIER) as! LevelSectionCell
         cell.setupContents(title: indexPath.row == 0 ? "Finding the object" : "Have an adventure")
         cell.setupSelectHandler { [unowned self] category in
-            let vc = StorytellingVC(category: category)
-            self.present(vc, animated: true)
+            if udIsShowTutorial {
+                let vc = StorytellingVC(category: category)
+                self.present(vc, animated: true)
+            }else {
+                let vc = TutorialViewController()
+                vc.category = category
+                self.present(vc, animated: true)
+            }
         }
         return cell
     }

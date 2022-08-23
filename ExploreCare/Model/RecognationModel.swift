@@ -104,9 +104,21 @@ extension Category {
             ]),
             
             Category(id: 8, categoryName: "Test1", categoryImage: UIImage(systemName: "trash.circle.fill")!, isLockLevel: true, storyTellingText: "", charImage: UIImage(named: "ic_char_iky")!, object: []),
-        
+            
             Category(id: 9, categoryName: "Test2", categoryImage: UIImage(systemName: "trash.circle.fill")!, isLockLevel: true, storyTellingText: "", charImage: UIImage(named: "ic_char_iky")!, object: [])
         ]
+    }
+}
+
+
+//dummy tutorial
+extension Category {
+    static func dataObjectTutorial() -> Category {
+        return Category(id: 1, categoryName: "Tutorial", categoryImage: UIImage(named: "background_bedroom")!, isLockLevel: false, storyTellingText: storyTelling(type: "bedroom"), charImage: UIImage(named: "ic_char_iky")!, object: [
+            ObjectRecog(id: 0, name: "Bottle", objectName: "bottle", descriptionName: "Iky is filling up his water bottle.", objectImage: UIImage(named: "ic_bottle")!, objectImageString: "ic_bottle", objectImageLabel: UIImage(named: "ic_bottle_label")!),
+            ObjectRecog(id: 1, name: "Bottle", objectName: "truck", descriptionName: "Iky is filling up his water bottle.", objectImage: UIImage(named: "ic_bottle")!, objectImageString: "ic_bottle", objectImageLabel: UIImage(named: "ic_bottle_label")!)
+        ])
+        
     }
 }
 

@@ -26,15 +26,17 @@ class ResultModalVC: UIViewController {
     
     private var object: ObjectRecog!
     private var index: Int!
+    private var isTutorial: Bool!
     
     // MARK: - Overriden Functions
-    init(object: ObjectRecog, index: Int) {
+    init(object: ObjectRecog, index: Int, isTutorial: Bool) {
         super.init(nibName: "ResultModalVC", bundle: nil)
         modalPresentationStyle = .overCurrentContext
         modalTransitionStyle = .crossDissolve
         
         self.object = object
         self.index = index
+        self.isTutorial = isTutorial
     }
     
     required init?(coder: NSCoder) {
@@ -53,7 +55,7 @@ class ResultModalVC: UIViewController {
         objectNameLabel.text = object.objectName.capitalized
         objectDescriptionLabel.text = object.descriptionName
         
-        if index == 5 {
+        if index == 5 || isTutorial {
             nextButton.setTitle("Finish", for: .normal)
         }
     }

@@ -25,6 +25,7 @@ class ObjectRecogViewController: UIViewController {
     private let measure = Measure()
     var player = AVService.shared
     var indexObjectRecog = 0
+    var isTutorial = false
     
     // MARK: - Init Model Core ML
     let objectDectectionModel = YOLOv3Tiny()
@@ -75,7 +76,8 @@ class ObjectRecogViewController: UIViewController {
     }
     
     @IBAction func closeButton(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        let vc = HomeVC()
+        navigationController?.pushViewController(vc, animated: true)
         
         //push value to iwatch
         viewModel.sendMessageToIwatch(name: udUserName, time: 0, startExplore: false)
@@ -142,7 +144,7 @@ extension ObjectRecogViewController {
             if indexObjectRecog <= 4 {
                 if category?.object[indexObjectRecog].objectName == predictions.first?.labels.first?.identifier {
                     matchingObject(objectRecog: (category?.object[indexObjectRecog])!)
-                    indexObjectRecog += 1
+                        indexObjectRecog += 1
                 }
             }
             
@@ -189,24 +191,32 @@ extension ObjectRecogViewController: CustomAlertDelegate {
 }
 
 extension ObjectRecogViewController: ResultModalDelegate {
-    func onNextButttonPressed() {
+    func onNextButttonPressed(){
         timer.invalidate()
         stopConfetti()
         
-        if indexObjectRecog >= 5 {
-            indexObjectRecog = 0
-            guideDescLabel.text = "\(textFirstGuide()), let's find "
-            guideObjectName.text = category!.object[indexObjectRecog].name
-            objectImageView.image = (category?.object[0].objectImage)!
-            
-            //to celebrate viewcontroller
-            //to feedback page
-            let feedbackView = UIHostingController(rootView: FeedbackView(object: category!.object))
-            navigationController?.pushViewController(feedbackView, animated: true)
+        if isTutorial {
+            print("result screen")
+            let vc = ResultTutorialViewController()
+            vc.category = self.category
+            navigationController?.pushViewController(vc, animated: true)
         }else {
-            guideDescLabel.text = "\(textFirstGuide()), let's find "
-            guideObjectName.text = category!.object[indexObjectRecog].name
-            objectImageView.image = (category?.object[indexObjectRecog].objectImage)!
+            if indexObjectRecog >= (category?.object.count)! {
+                indexObjectRecog = 0
+                guideDescLabel.text = "\(textFirstGuide()), let's find "
+                guideObjectName.text = category!.object[indexObjectRecog].name
+                objectImageView.image = (category?.object[0].objectImage)!
+                
+                //to celebrate viewcontroller
+                //to feedback page
+                let feedbackView = UIHostingController(rootView: FeedbackView(object: category!.object))
+                navigationController?.pushViewController(feedbackView, animated: true)
+            }else {
+                guideDescLabel.text = "\(textFirstGuide()), let's find "
+                guideObjectName.text = category!.object[indexObjectRecog].name
+                objectImageView.image = (category?.object[indexObjectRecog].objectImage)!
+            }
+            
         }
         
         viewModel.sendMessageToIwatch(name: udUserName, time: 0, startExplore: true)
@@ -264,7 +274,7 @@ extension ObjectRecogViewController {
     }
     
     func showResultModal(object: ObjectRecog) {
-        let resultModal = ResultModalVC(object: object, index: indexObjectRecog)
+        let resultModal = ResultModalVC(object: object, index: indexObjectRecog, isTutorial: self.isTutorial)
         resultModal.delegate = self
         present(resultModal, animated: true)
     }

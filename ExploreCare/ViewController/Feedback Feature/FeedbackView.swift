@@ -19,11 +19,11 @@ struct FeedbackView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("\n\nWell done! We are proud of you!\n")
+                Text("\nWell done! We are proud of you!\n")
                     .foregroundColor(Color("green"))
-                    .font(.system(size: 26, weight: .bold, design: .rounded))
+                    .font(.system(size: 34, weight: .bold, design: .rounded))
                 
-                Carousel(cardWidth: widthMainView, spacing: -530) {
+                Carousel(cardWidth: widthMainView, spacing: -400) {
                     ForEach(object) {obj in
                         CarouselCardModif {
                             CarouselCard(item: obj).onTapGesture {

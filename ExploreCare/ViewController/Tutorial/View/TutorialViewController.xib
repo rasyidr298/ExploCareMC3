@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TutorialViewController" customModule="ExploreCare" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iVA-wg-Lyr" id="8xt-V7-rnb"/>
+                <outlet property="previousButton" destination="Xkq-fJ-AFm" id="g8U-au-lMk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_tutorial" translatesAutoresizingMaskIntoConstraints="NO" id="mQu-te-wLV">
+                    <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5C-Zg-zbY">
+                    <rect key="frame" x="698" y="339" width="160" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="TLc-0y-unG"/>
+                        <constraint firstAttribute="width" constant="160" id="ll0-ec-NXH"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Next">
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" name="soft_blue"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="32"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="nextButton:" destination="-1" eventType="touchUpInside" id="GJA-I3-vM2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPi-pD-C51">
+                    <rect key="frame" x="698" y="34" width="160" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="AOh-Vy-uFN"/>
+                        <constraint firstAttribute="height" constant="39" id="g2m-fT-wGu"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Skip Tutorial">
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" name="orange"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="32"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="skipButton:" destination="-1" eventType="touchUpInside" id="9LR-MH-PXE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xkq-fJ-AFm">
+                    <rect key="frame" x="507" y="339" width="160" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="cbT-xD-OS1"/>
+                        <constraint firstAttribute="height" constant="39" id="pOX-dp-Dnb"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Previous">
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" name="soft_blue"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="32"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="previousButton:" destination="-1" eventType="touchUpInside" id="8mu-Ik-jaI"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVA-wg-Lyr">
+                    <rect key="frame" x="164.5" y="131" width="567" height="152"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="152" id="joC-qA-hr7"/>
+                        <constraint firstAttribute="width" constant="567" id="w6C-Tr-sQZ"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hib-1n-9Hc">
+                    <rect key="frame" x="38" y="34" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="3Uz-12-epR"/>
+                        <constraint firstAttribute="height" constant="64" id="zZo-vi-Lmb"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="ic_tutorial_back" backgroundImage="ic_tutorial_back"/>
+                    <connections>
+                        <action selector="backButton:" destination="-1" eventType="touchUpInside" id="EWm-9Y-d2m"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZY2-Id-bgV">
+                    <rect key="frame" x="110" y="40" width="113" height="52"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutorial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRL-sb-xVJ">
+                            <rect key="frame" x="0.0" y="6" width="113" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <color key="textColor" name="mainColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="gRL-sb-xVJ" firstAttribute="leading" secondItem="ZY2-Id-bgV" secondAttribute="leading" id="1fs-WP-Osc"/>
+                        <constraint firstAttribute="width" constant="113" id="1qF-Fg-zWO"/>
+                        <constraint firstAttribute="height" constant="52" id="6CX-gU-Yfj"/>
+                        <constraint firstAttribute="trailing" secondItem="gRL-sb-xVJ" secondAttribute="trailing" id="aju-XP-sfB"/>
+                        <constraint firstItem="gRL-sb-xVJ" firstAttribute="top" secondItem="ZY2-Id-bgV" secondAttribute="top" constant="6" id="bPF-ad-wbj"/>
+                        <constraint firstAttribute="bottom" secondItem="gRL-sb-xVJ" secondAttribute="bottom" constant="6" id="rxA-p2-2DD"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="MPi-pD-C51" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="34" id="3ea-YU-Kb1"/>
+                <constraint firstItem="mQu-te-wLV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5PG-Zl-Sog"/>
+                <constraint firstItem="ZY2-Id-bgV" firstAttribute="leading" secondItem="hib-1n-9Hc" secondAttribute="trailing" constant="8" symbolic="YES" id="FxG-xr-6sA"/>
+                <constraint firstAttribute="trailing" secondItem="mQu-te-wLV" secondAttribute="trailing" id="J5l-cc-YUw"/>
+                <constraint firstAttribute="bottom" secondItem="mQu-te-wLV" secondAttribute="bottom" id="Nfd-vm-jcR"/>
+                <constraint firstItem="hib-1n-9Hc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="38" id="TMc-uf-e6T"/>
+                <constraint firstItem="iVA-wg-Lyr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="TVg-XB-fXG"/>
+                <constraint firstItem="iVA-wg-Lyr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vt6-oH-r7N"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="P5C-Zg-zbY" secondAttribute="bottom" constant="15" id="WLI-tr-1TH"/>
+                <constraint firstItem="P5C-Zg-zbY" firstAttribute="leading" secondItem="Xkq-fJ-AFm" secondAttribute="trailing" constant="31" id="biP-Xg-DDY"/>
+                <constraint firstItem="mQu-te-wLV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cry-jG-l6r"/>
+                <constraint firstItem="hib-1n-9Hc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="34" id="kY2-0S-Sfk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Xkq-fJ-AFm" secondAttribute="bottom" constant="15" id="lj3-K4-eCc"/>
+                <constraint firstAttribute="trailing" secondItem="MPi-pD-C51" secondAttribute="trailing" constant="38" id="pEo-Id-ZGH"/>
+                <constraint firstItem="ZY2-Id-bgV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="ptL-9J-K4b"/>
+                <constraint firstAttribute="trailing" secondItem="P5C-Zg-zbY" secondAttribute="trailing" constant="38" id="xEJ-wa-PRy"/>
+            </constraints>
+            <point key="canvasLocation" x="131.91964285714286" y="115.94202898550725"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_tutorial" width="844" height="390"/>
+        <image name="ic_tutorial_back" width="64" height="64"/>
+        <namedColor name="mainColor">
+            <color red="0.17900000512599945" green="0.27700001001358032" blue="0.46599999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="orange">
+            <color red="0.9820093513" green="0.67446202040000003" blue="0.25517868999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="soft_blue">
+            <color red="0.75663048030000002" green="0.9246181846" blue="0.99916511770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
