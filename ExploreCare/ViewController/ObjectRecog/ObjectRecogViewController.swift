@@ -5,6 +5,7 @@
 //  Created by Rasyid Ridla on 23/06/22.
 //
 
+import SwiftUI
 import UIKit
 import Vision
 import AVFoundation
@@ -173,7 +174,10 @@ extension ObjectRecogViewController: CustomAlertDelegate {
             guideObjectName.text = category!.object[indexObjectRecog].name
             objectImageView.image = (category?.object[0].objectImage)!
             
-            //to celebrate viewcontroller
+            //to feedback page
+            guard let window = UIApplication.shared.keyWindow else {return}
+            let feedbackView = UIHostingController(rootView: FeedbackView(object: category!.object))
+            window.rootViewController = feedbackView
         }else {
             guideDescLabel.text = "\(textFirstGuide()), let's find "
             guideObjectName.text = category!.object[indexObjectRecog].name

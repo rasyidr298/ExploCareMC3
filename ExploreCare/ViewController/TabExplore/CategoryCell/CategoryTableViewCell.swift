@@ -60,10 +60,10 @@ class CategoryTableViewCell: UITableViewCell {
         objectImage2.image = missions?.object[1].objectImage
         objectImage3.image = missions?.object[2].objectImage
         
-        if missions?.object.count ?? 3 > 3 {
-            objectImage4.image = missions?.object[3].objectImage
-            objectImage5.image = missions?.object[4].objectImage
-        }
+//        if missions?.object.count ?? 3 > 3 {
+//            objectImage4.image = missions?.object[3].objectImage
+//            objectImage5.image = missions?.object[4].objectImage
+//        }
         
         if missions!.isLockLevel {
             levelUnlockLabel.text = "Level Lock"

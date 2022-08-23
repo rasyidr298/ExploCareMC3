@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 import AVFoundation
 
 func allert(view: UIViewController, title: String, message: String) {
@@ -39,5 +40,22 @@ func toAppSetting() {
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
+    }
+}
+
+// MARK: CustomShape
+public struct CustomShape: Shape {
+    var corner: UIRectCorner
+    var radius: CGFloat
+    
+    public init(corner: UIRectCorner, radius: CGFloat) {
+        self.corner = corner
+        self.radius = radius
+    }
+    
+    public func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corner, cornerRadii: CGSize(width: radius, height: radius))
+        
+        return Path(path.cgPath)
     }
 }
