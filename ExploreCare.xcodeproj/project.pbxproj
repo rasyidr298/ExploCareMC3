@@ -163,7 +163,11 @@
 		B84C9DBF28B3272A0067E305 /* ResultModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C9DBD28B3272A0067E305 /* ResultModalVC.swift */; };
 		B84E36AD28B34887004A3087 /* StorytellingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E36AB28B34887004A3087 /* StorytellingVC.swift */; };
 		B84E36AE28B34887004A3087 /* StorytellingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84E36AC28B34887004A3087 /* StorytellingVC.xib */; };
-		B84E36B028B3495E004A3087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84E36AF28B3495E004A3087 /* LaunchScreen.storyboard */; };
+		B87B8CE928B672600083A644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87B8CE428B672600083A644 /* Main.storyboard */; };
+		B87B8CEA28B672600083A644 /* NameField.xib in Resources */ = {isa = PBXBuildFile; fileRef = B87B8CE528B672600083A644 /* NameField.xib */; };
+		B87B8CEB28B672600083A644 /* InputNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87B8CE628B672600083A644 /* InputNameViewController.swift */; };
+		B87B8CEC28B672600083A644 /* NameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87B8CE728B672600083A644 /* NameField.swift */; };
+		B87B8CEE28B6732E0083A644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87B8CED28B6732E0083A644 /* LaunchScreen.storyboard */; };
 		B8905C9328B5CA2C00D98127 /* background_music.mpeg in Resources */ = {isa = PBXBuildFile; fileRef = B8905C9228B5CA2C00D98127 /* background_music.mpeg */; };
 		B8905C9728B5CED100D98127 /* AdventureModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8905C9528B5CED100D98127 /* AdventureModalVC.swift */; };
 		B8905C9828B5CED100D98127 /* AdventureModalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8905C9628B5CED100D98127 /* AdventureModalVC.xib */; };
@@ -375,7 +379,11 @@
 		B84C9DBD28B3272A0067E305 /* ResultModalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultModalVC.swift; sourceTree = "<group>"; };
 		B84E36AB28B34887004A3087 /* StorytellingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytellingVC.swift; sourceTree = "<group>"; };
 		B84E36AC28B34887004A3087 /* StorytellingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StorytellingVC.xib; sourceTree = "<group>"; };
-		B84E36AF28B3495E004A3087 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B87B8CE428B672600083A644 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B87B8CE528B672600083A644 /* NameField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NameField.xib; sourceTree = "<group>"; };
+		B87B8CE628B672600083A644 /* InputNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputNameViewController.swift; sourceTree = "<group>"; };
+		B87B8CE728B672600083A644 /* NameField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameField.swift; sourceTree = "<group>"; };
+		B87B8CED28B6732E0083A644 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8905C9228B5CA2C00D98127 /* background_music.mpeg */ = {isa = PBXFileReference; lastKnownFileType = video.mpeg; path = background_music.mpeg; sourceTree = "<group>"; };
 		B8905C9528B5CED100D98127 /* AdventureModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureModalVC.swift; sourceTree = "<group>"; };
 		B8905C9628B5CED100D98127 /* AdventureModalVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdventureModalVC.xib; sourceTree = "<group>"; };
@@ -580,6 +588,7 @@
 			isa = PBXGroup;
 			children = (
 				01554D3228617159008AEA27 /* ExploreCare */,
+				B87B8CED28B6732E0083A644 /* LaunchScreen.storyboard */,
 				0186D0FA287FC2BE006540C1 /* ExploreCareW */,
 				0186D105287FC2BF006540C1 /* ExploreCareW WatchKit Extension */,
 				01554D3128617159008AEA27 /* Products */,
@@ -607,7 +616,6 @@
 				01554D49286171D4008AEA27 /* Utils */,
 				01554D48286171CE008AEA27 /* App */,
 				01554D47286171C0008AEA27 /* ViewController */,
-				B84E36AF28B3495E004A3087 /* LaunchScreen.storyboard */,
 			);
 			path = ExploreCare;
 			sourceTree = "<group>";
@@ -615,6 +623,7 @@
 		01554D47286171C0008AEA27 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B87B8CE228B672600083A644 /* InputName */,
 				B8905CAB28B5EBA800D98127 /* Help Modal */,
 				B8905C9428B5CEAC00D98127 /* Adventure Modal */,
 				01AE7ECC28B50B4900CDB9CE /* Tutorial */,
@@ -1021,6 +1030,17 @@
 			path = "Story telling";
 			sourceTree = "<group>";
 		};
+		B87B8CE228B672600083A644 /* InputName */ = {
+			isa = PBXGroup;
+			children = (
+				B87B8CE428B672600083A644 /* Main.storyboard */,
+				B87B8CE528B672600083A644 /* NameField.xib */,
+				B87B8CE628B672600083A644 /* InputNameViewController.swift */,
+				B87B8CE728B672600083A644 /* NameField.swift */,
+			);
+			path = InputName;
+			sourceTree = "<group>";
+		};
 		B8905C9428B5CEAC00D98127 /* Adventure Modal */ = {
 			isa = PBXGroup;
 			children = (
@@ -1168,6 +1188,7 @@
 				01733E1C28B61F5300DA979B /* Motorbike.mp3 in Resources */,
 				01733E9828B6221C00DA979B /* Instruction.mp3 in Resources */,
 				01733E9428B6221C00DA979B /* Ras Introduction.mp3 in Resources */,
+				B87B8CE928B672600083A644 /* Main.storyboard in Resources */,
 				01733E7B28B621FD00DA979B /* Ras Plays in Garden.mp3 in Resources */,
 				B8905CAE28B5EBA800D98127 /* HelpModalVC.xib in Resources */,
 				01733E1A28B61F5300DA979B /* Bicycle.mp3 in Resources */,
@@ -1177,6 +1198,7 @@
 				01733E8728B621FD00DA979B /* Find Giraffe .mp3 in Resources */,
 				01AE7EE028B527FE00CDB9CE /* ResultTutorialViewController.xib in Resources */,
 				01733E7128B621FD00DA979B /* Find Refrigerator.mp3 in Resources */,
+				B87B8CEA28B672600083A644 /* NameField.xib in Resources */,
 				01733E7028B621FD00DA979B /* Find Spoon.mp3 in Resources */,
 				01733E9328B6221C00DA979B /* Good Job Ras.mp3 in Resources */,
 				01733E7728B621FD00DA979B /* Find Bowl.mp3 in Resources */,
@@ -1186,7 +1208,6 @@
 				01733E2F28B61F5300DA979B /* Good Job Manda.mp3 in Resources */,
 				01733E1828B61F5300DA979B /* Truck.mp3 in Resources */,
 				01733E7F28B621FD00DA979B /* Find Apple.mp3 in Resources */,
-				B84E36B028B3495E004A3087 /* LaunchScreen.storyboard in Resources */,
 				01733E6B28B621FD00DA979B /* Find Chair.mp3 in Resources */,
 				01733E1B28B61F5300DA979B /* Car.mp3 in Resources */,
 				01733E8428B621FD00DA979B /* Manda Here.mp3 in Resources */,
@@ -1237,6 +1258,7 @@
 				01733E0F28B61F5300DA979B /* Find Bottle.mp3 in Resources */,
 				01733E3D28B61F5300DA979B /* Bench.mp3 in Resources */,
 				01733E2028B61F5300DA979B /* Bottle.mp3 in Resources */,
+				B87B8CEE28B6732E0083A644 /* LaunchScreen.storyboard in Resources */,
 				01733E0928B61F5300DA979B /* Carrot.mp3 in Resources */,
 				01733EA228B66F3600DA979B /* Found To Explore.mp3 in Resources */,
 				01554D3D2861715A008AEA27 /* Assets.xcassets in Resources */,
@@ -1316,7 +1338,9 @@
 				B84C9DBF28B3272A0067E305 /* ResultModalVC.swift in Sources */,
 				0124C7DF28643427001A4D58 /* DrawingBoundingBoxView.swift in Sources */,
 				0157CA66288854100008B287 /* ObjectRecogViewModel.swift in Sources */,
+				B87B8CEB28B672600083A644 /* InputNameViewController.swift in Sources */,
 				01E538D428AF744B0017BFE4 /* Category+CoreDataProperties.swift in Sources */,
+				B87B8CEC28B672600083A644 /* NameField.swift in Sources */,
 				011EA9BF286564410078D4CD /* OnBoardingViewController.swift in Sources */,
 				014093F028B34C4400B6BF54 /* ItemCarouselView.swift in Sources */,
 				B84C9DB828B327210067E305 /* LevelSectionCell.swift in Sources */,
