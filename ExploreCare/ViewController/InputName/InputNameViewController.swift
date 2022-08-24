@@ -8,13 +8,12 @@
 import UIKit
 
 class InputNameViewController: UIViewController {
+    
+    private let nameField: NameField = .loadFromNib()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        
-        let nameField: NameField = .loadFromNib()
         nameField.center = view.center
         nameField.frame.origin.y -= 15
         nameField.layer.cornerRadius = 30
@@ -23,20 +22,19 @@ class InputNameViewController: UIViewController {
         
 //        nameFieldCell.enterButton.layer.cornerRadius = 32
 //        nameFieldCell.enterButton.backgroundColor = .init(red: 0.76, green: 0.93, blue: 1.00, alpha: 1.00)
-        
-        // Do any additional setup after loading the view.
         view.addSubview(nameField)
+        
+        nameField.enterButton.addTarget(self, action: #selector(enterAction), for: .touchUpInside)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        AVService.shared.playMusic(name: "inputName1", type: "mp3")
     }
-    */
+    
+    @objc private func enterAction() {
+        UserDefaults.standard.set(nameField.nameFill.text ?? "", forKey: udUserNameKey)
+        navigationController?.pushViewController(HomeVC(), animated: true)
+    }
 
 }

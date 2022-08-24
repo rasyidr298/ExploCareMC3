@@ -69,12 +69,12 @@ class ObjectRecogViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.videoCapture.start()
-        helpTimer.invalidate()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.videoCapture.stop()
+        helpTimer.invalidate()
     }
     
     @IBAction func closeButton(_ sender: Any) {
