@@ -38,6 +38,7 @@ class StorytellingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        playMusic()
     }
     
     // MARK: - UI Setups
@@ -48,6 +49,10 @@ class StorytellingVC: UIViewController {
         objectsCollectionView.register(UINib(nibName: "StorytellingObjectCell", bundle: nil), forCellWithReuseIdentifier: StorytellingObjectCell.REUSE_IDENTIFIER)
         levelDescriptionLabel.text = category?.storyTellingText
         levelNameLabel.text = "  \(category?.categoryName ?? "")  "
+    }
+    
+    private func playMusic() {
+        AVService.shared.storytellingSound(type: category!.categoryName)
     }
     
     // MARK: - Custom Functions

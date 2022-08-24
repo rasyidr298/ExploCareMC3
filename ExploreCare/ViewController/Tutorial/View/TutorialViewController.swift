@@ -19,6 +19,7 @@ class TutorialViewController: UIViewController {
         super.viewDidLoad()
         
         setupPageView()
+        playSound(index: 0)
     }
     
     private func setupPageView() {
@@ -66,6 +67,14 @@ class TutorialViewController: UIViewController {
         vc.category = category
         (presentingViewController as? UINavigationController)?.pushViewController(vc, animated: true)
     }
+    
+    private func playSound(index: Int) {
+        if index == 0 {
+            AVService.shared.tutorialSound(type: "Ras Introduction")
+        }else {
+            AVService.shared.tutorialSound(type: "Instruction")
+        }
+    }
 }
 
 extension TutorialViewController:TutorialPageViewControllerDelegate {
@@ -73,6 +82,8 @@ extension TutorialViewController:TutorialPageViewControllerDelegate {
     
     func turnPageController(to index: Int) {
         currentIndex = index
+        playSound(index: index)
+        
         if index == 0 {
             previousButton.isHidden = true
         }

@@ -13,7 +13,7 @@ struct FeedbackView: View {
     
     @State var heightMainView = UIScreen.main.bounds.height
     @State var widthMainView = UIScreen.main.bounds.width
-    @State private var counter: Int = 10
+    @State private var counter: Int = 30
     @State var object: [ObjectRecog] = []
     
     var body: some View {
@@ -27,7 +27,7 @@ struct FeedbackView: View {
                     ForEach(object) {obj in
                         CarouselCardModif {
                             CarouselCard(item: obj).onTapGesture {
-                                //playsound
+                                AVService.shared.playFeedbackSound(objectRecog: obj)
                             }
                         }
                     }

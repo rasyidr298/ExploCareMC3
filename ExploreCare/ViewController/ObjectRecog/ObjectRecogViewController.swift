@@ -53,6 +53,8 @@ class ObjectRecogViewController: UIViewController {
         setUpModel()
         setUpCamera()
         setupView()
+        startHelpTimer()
+        playMusic()
     }
     
     override func viewDidLayoutSubviews() {
@@ -166,35 +168,33 @@ extension ObjectRecogViewController {
 extension ObjectRecogViewController: ResultModalDelegate {
     func onNextButttonPressed(){
         if isTutorial {
-            print("result screen")
+            helpTimer.invalidate()
             let vc = ResultTutorialViewController()
             vc.category = self.category
             navigationController?.pushViewController(vc, animated: true)
         }else {
             if indexObjectRecog >= (category?.object.count)! {
                 indexObjectRecog = 0
-                guideDescLabel.text = "\(textFirstGuide()), let's find "
-                guideObjectName.text = category!.object[indexObjectRecog].name
-                objectImageView.image = (category?.object[0].objectImage)!
-                
-                startHelpTimer()
+                helpTimer.invalidate()
                 
                 //to feedback page
                 let feedbackView = UIHostingController(rootView: FeedbackView(object: category!.object))
                 navigationController?.pushViewController(feedbackView, animated: true)
             }else {
+                playMusic()
+                startHelpTimer()
+                
                 guideDescLabel.text = "\(textFirstGuide()), let's find "
                 guideObjectName.text = category!.object[indexObjectRecog].name
                 objectImageView.image = (category?.object[indexObjectRecog].objectImage)!
             }
             
         }
-        
         viewModel.sendMessageToIwatch(name: udUserName, time: 0, startExplore: true)
     }
     
     func onSpeakerButttonPressed(object: ObjectRecog) {
-        player.playObjectSound(player: player, objectRecog: object)
+        player.playFeedbackSound(objectRecog: object)
     }
 }
 
@@ -225,7 +225,6 @@ extension ObjectRecogViewController {
         guideDescLabel.text = "\(textFirstGuide()), let's find "
         guideObjectName.text = category!.object[indexObjectRecog].name
         objectImageView.image = (category?.object[indexObjectRecog].objectImage)!
-        startHelpTimer()
     }
     
     func resizePreviewLayer() {
@@ -233,7 +232,7 @@ extension ObjectRecogViewController {
     }
     
     func showResultModal(object: ObjectRecog) {
-        let resultModal = ResultModalVC(object: object, index: indexObjectRecog, isTutorial: self.isTutorial)
+        let resultModal = ResultModalVC(object: object, index: indexObjectRecog, isTutorial: self.isTutorial, categoryName: self.category!.categoryName)
         resultModal.delegate = self
         present(resultModal, animated: true)
     }
@@ -253,8 +252,10 @@ extension ObjectRecogViewController {
     func matchingObject(objectRecog: ObjectRecog) {
         DispatchQueue.main.async { [unowned self] in
             showResultModal(object: objectRecog)
+            helpTimer.invalidate()
 
-            player.playAdditionalSound(player: player, type: "correct")
+            player.playAdditionalSound(type: "correct")
+            player.foundObjectSound(type: category!.categoryName)
             
             //push value to iwatch
             viewModel.sendMessageToIwatch(name: udUserName, time: 0, startExplore: false)
@@ -266,5 +267,9 @@ extension ObjectRecogViewController {
             return "Next"
         }
         return "First"
+    }
+    
+    private func playMusic() {
+        player.findObjectSound(type: (category?.object[indexObjectRecog].name)!)
     }
 }

@@ -24,12 +24,13 @@ class ResultModalVC: UIViewController {
     // MARK: - Variables
     weak var delegate: ResultModalDelegate?
     
+    private var categoryName: String!
     private var object: ObjectRecog!
     private var index: Int!
     private var isTutorial: Bool!
     
     // MARK: - Overriden Functions
-    init(object: ObjectRecog, index: Int, isTutorial: Bool) {
+    init(object: ObjectRecog, index: Int, isTutorial: Bool, categoryName: String) {
         super.init(nibName: "ResultModalVC", bundle: nil)
         modalPresentationStyle = .overCurrentContext
         modalTransitionStyle = .crossDissolve
@@ -37,6 +38,7 @@ class ResultModalVC: UIViewController {
         self.object = object
         self.index = index
         self.isTutorial = isTutorial
+        self.categoryName = categoryName
     }
     
     required init?(coder: NSCoder) {
@@ -45,6 +47,7 @@ class ResultModalVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
     }
     
@@ -59,8 +62,6 @@ class ResultModalVC: UIViewController {
             nextButton.setTitle("Finish", for: .normal)
         }
     }
-    
-    // MARK: - Custom Functions
 
     // MARK: - Actions
     @IBAction func nextAction(_ sender: Any) {

@@ -16,6 +16,8 @@ class ResultTutorialViewController: UIViewController {
         super.viewDidLoad()
         
         tutorialLabel.text = "Great! You found the \(category?.object[0].name ?? "")!\n Now, you’re ready to explore. Let’s go!"
+        
+        AVService.shared.tutorialSound(type: "Found To Explore")
     }
     
     @IBAction func closeButton(_ sender: Any) {
