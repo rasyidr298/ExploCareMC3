@@ -15,7 +15,7 @@ class InputNameViewController: UIViewController {
         super.viewDidLoad()
         
         nameField.center = view.center
-        nameField.frame.origin.y -= 15
+        nameField.frame.origin.y -= 60
         nameField.layer.cornerRadius = 30
 //
 //        nameFieldCell.fieldTitle.font = UIFont(name: "SFProRoundedSemibold", size: 20)

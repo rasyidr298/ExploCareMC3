@@ -107,7 +107,7 @@ class AVService {
         case "Backpack": player.playMusic(name: "Find Backpack", type: "mp3")
         case "Book": player.playMusic(name: "Find Book", type: "mp3")
         case "Laptop": player.playMusic(name: "Find Laptop", type: "mp3")
-        case "Bootle": player.playMusic(name: "Find Bottle", type: "mp3")
+        case "Bottle": player.playMusic(name: "Find Bottle", type: "mp3")
         case "Clock": player.playMusic(name: "Find Clock", type: "mp3")
             
             //livingroom
@@ -127,7 +127,7 @@ class AVService {
             //garden
         case "Vase": player.playMusic(name: "Find Vase", type: "mp3")
         case "Umbrella": player.playMusic(name: "Find Umbrella", type: "mp3")
-        case "PottedPlant": player.playMusic(name: "Find PottedPlant", type: "mp3")
+        case "Potted Plant": player.playMusic(name: "Find Potted Plant", type: "mp3")
         case "Bench": player.playMusic(name: "Find Bench", type: "mp3")
         case "Ball": player.playMusic(name: "Find Ball", type: "mp3")
             
