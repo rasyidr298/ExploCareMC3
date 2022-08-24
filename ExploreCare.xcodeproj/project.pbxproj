@@ -22,11 +22,7 @@
 		011EA9C52865653F0078D4CD /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9C42865653F0078D4CD /* Constans.swift */; };
 		011EA9C828656B870078D4CD /* OnBoardingPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9C728656B870078D4CD /* OnBoardingPageViewController.xib */; };
 		011EA9CA28656BD90078D4CD /* OnBoardingContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9C928656BD90078D4CD /* OnBoardingContentViewController.xib */; };
-		011EA9DA286704350078D4CD /* TabExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9D8286704350078D4CD /* TabExploreViewController.swift */; };
-		011EA9DB286704350078D4CD /* TabExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9D9286704350078D4CD /* TabExploreViewController.xib */; };
 		011EA9F0286843B00078D4CD /* RecognationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9EF286843B00078D4CD /* RecognationModel.swift */; };
-		011EA9FC286C4DBD0078D4CD /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9FA286C4DBD0078D4CD /* CategoryTableViewCell.swift */; };
-		011EA9FD286C4DBD0078D4CD /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9FB286C4DBD0078D4CD /* CategoryTableViewCell.xib */; };
 		011EAA01286D9D100078D4CD /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EAA00286D9D100078D4CD /* View.swift */; };
 		011EAA03286DC7F10078D4CD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EAA02286DC7F10078D4CD /* Logger.swift */; };
 		0124C7D62862FC9E001A4D58 /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7D52862FC9E001A4D58 /* YOLOv3Tiny.mlmodel */; };
@@ -64,6 +60,8 @@
 		01AE7EDB28B50D1300CDB9CE /* TutorialContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AE7ED928B50D1300CDB9CE /* TutorialContentViewController.xib */; };
 		01AE7EDF28B527FE00CDB9CE /* ResultTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AE7EDD28B527FE00CDB9CE /* ResultTutorialViewController.swift */; };
 		01AE7EE028B527FE00CDB9CE /* ResultTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AE7EDE28B527FE00CDB9CE /* ResultTutorialViewController.xib */; };
+		01AE7EE428B5D36400CDB9CE /* HelpModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AE7EE228B5D36400CDB9CE /* HelpModalVC.swift */; };
+		01AE7EE528B5D36400CDB9CE /* HelpModalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AE7EE328B5D36400CDB9CE /* HelpModalVC.xib */; };
 		01B972482872851A007F1521 /* correct.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 01B972472872851A007F1521 /* correct.aiff */; };
 		01B9724F28729921007F1521 /* cup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724928729920007F1521 /* cup.mp3 */; };
 		01B9725028729921007F1521 /* backpack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724A28729920007F1521 /* backpack.mp3 */; };
@@ -71,8 +69,6 @@
 		01B9725228729921007F1521 /* clock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724C28729921007F1521 /* clock.mp3 */; };
 		01B9725328729921007F1521 /* laptop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724D28729921007F1521 /* laptop.mp3 */; };
 		01B9725428729921007F1521 /* tv.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724E28729921007F1521 /* tv.mp3 */; };
-		01B972582872B25E007F1521 /* CustomAllertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B972562872B25E007F1521 /* CustomAllertViewController.swift */; };
-		01B972592872B25E007F1521 /* CustomAllertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B972572872B25E007F1521 /* CustomAllertViewController.xib */; };
 		01E538CC28AF73630017BFE4 /* RecognizeData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01E538CA28AF73630017BFE4 /* RecognizeData.xcdatamodeld */; };
 		01E538D128AF744B0017BFE4 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E538CD28AF744B0017BFE4 /* Item+CoreDataClass.swift */; };
 		01E538D228AF744B0017BFE4 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E538CE28AF744B0017BFE4 /* Item+CoreDataProperties.swift */; };
@@ -153,11 +149,7 @@
 		011EA9C42865653F0078D4CD /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		011EA9C728656B870078D4CD /* OnBoardingPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingPageViewController.xib; sourceTree = "<group>"; };
 		011EA9C928656BD90078D4CD /* OnBoardingContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingContentViewController.xib; sourceTree = "<group>"; };
-		011EA9D8286704350078D4CD /* TabExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabExploreViewController.swift; sourceTree = "<group>"; };
-		011EA9D9286704350078D4CD /* TabExploreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabExploreViewController.xib; sourceTree = "<group>"; };
 		011EA9EF286843B00078D4CD /* RecognationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognationModel.swift; sourceTree = "<group>"; };
-		011EA9FA286C4DBD0078D4CD /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
-		011EA9FB286C4DBD0078D4CD /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		011EAA00286D9D100078D4CD /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		011EAA02286DC7F10078D4CD /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		0124C7D52862FC9E001A4D58 /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
@@ -198,6 +190,8 @@
 		01AE7ED928B50D1300CDB9CE /* TutorialContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialContentViewController.xib; sourceTree = "<group>"; };
 		01AE7EDD28B527FE00CDB9CE /* ResultTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTutorialViewController.swift; sourceTree = "<group>"; };
 		01AE7EDE28B527FE00CDB9CE /* ResultTutorialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTutorialViewController.xib; sourceTree = "<group>"; };
+		01AE7EE228B5D36400CDB9CE /* HelpModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpModalVC.swift; sourceTree = "<group>"; };
+		01AE7EE328B5D36400CDB9CE /* HelpModalVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpModalVC.xib; sourceTree = "<group>"; };
 		01B972472872851A007F1521 /* correct.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = correct.aiff; sourceTree = "<group>"; };
 		01B9724928729920007F1521 /* cup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cup.mp3; sourceTree = "<group>"; };
 		01B9724A28729920007F1521 /* backpack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backpack.mp3; sourceTree = "<group>"; };
@@ -205,8 +199,6 @@
 		01B9724C28729921007F1521 /* clock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clock.mp3; sourceTree = "<group>"; };
 		01B9724D28729921007F1521 /* laptop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laptop.mp3; sourceTree = "<group>"; };
 		01B9724E28729921007F1521 /* tv.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tv.mp3; sourceTree = "<group>"; };
-		01B972562872B25E007F1521 /* CustomAllertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAllertViewController.swift; sourceTree = "<group>"; };
-		01B972572872B25E007F1521 /* CustomAllertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAllertViewController.xib; sourceTree = "<group>"; };
 		01E538CB28AF73630017BFE4 /* CategoryData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CategoryData.xcdatamodel; sourceTree = "<group>"; };
 		01E538CD28AF744B0017BFE4 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
 		01E538CE28AF744B0017BFE4 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -352,25 +344,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		011EA9D7286704110078D4CD /* TabExplore */ = {
-			isa = PBXGroup;
-			children = (
-				011EA9F9286C4D550078D4CD /* CategoryCell */,
-				011EA9D8286704350078D4CD /* TabExploreViewController.swift */,
-				011EA9D9286704350078D4CD /* TabExploreViewController.xib */,
-			);
-			path = TabExplore;
-			sourceTree = "<group>";
-		};
-		011EA9F9286C4D550078D4CD /* CategoryCell */ = {
-			isa = PBXGroup;
-			children = (
-				011EA9FA286C4DBD0078D4CD /* CategoryTableViewCell.swift */,
-				011EA9FB286C4DBD0078D4CD /* CategoryTableViewCell.xib */,
-			);
-			path = CategoryCell;
-			sourceTree = "<group>";
-		};
 		0124C7D32862DB32001A4D58 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,13 +442,12 @@
 		01554D47286171C0008AEA27 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				01AE7EE128B5D33700CDB9CE /* Help Modal */,
 				01AE7ECC28B50B4900CDB9CE /* Tutorial */,
 				014093E628B34A6300B6BF54 /* Feedback Feature */,
 				B84E36AA28B34873004A3087 /* Story telling */,
 				B84C9DBB28B3272A0067E305 /* Result Modal */,
 				B84C9DAD28B327210067E305 /* Home */,
-				011EA9D7286704110078D4CD /* TabExplore */,
-				01B972552872B233007F1521 /* CustomAllert */,
 				013458B22871AE2100BCAAE6 /* FinishView */,
 				011EA9B5286561E90078D4CD /* OnBoarding */,
 				0124C7DD2864313A001A4D58 /* ObjectRecog */,
@@ -592,13 +564,13 @@
 			path = Result;
 			sourceTree = "<group>";
 		};
-		01B972552872B233007F1521 /* CustomAllert */ = {
+		01AE7EE128B5D33700CDB9CE /* Help Modal */ = {
 			isa = PBXGroup;
 			children = (
-				01B972562872B25E007F1521 /* CustomAllertViewController.swift */,
-				01B972572872B25E007F1521 /* CustomAllertViewController.xib */,
+				01AE7EE228B5D36400CDB9CE /* HelpModalVC.swift */,
+				01AE7EE328B5D36400CDB9CE /* HelpModalVC.xib */,
 			);
-			path = CustomAllert;
+			path = "Help Modal";
 			sourceTree = "<group>";
 		};
 		01E538C928AF73410017BFE4 /* Db */ = {
@@ -783,13 +755,11 @@
 			files = (
 				01B972482872851A007F1521 /* correct.aiff in Resources */,
 				B843735528B3C63400A8A19E /* StorytellingObjectCell.xib in Resources */,
-				01B972592872B25E007F1521 /* CustomAllertViewController.xib in Resources */,
 				01B9725128729921007F1521 /* book.mp3 in Resources */,
 				011EA9C828656B870078D4CD /* OnBoardingPageViewController.xib in Resources */,
 				01B9725028729921007F1521 /* backpack.mp3 in Resources */,
 				011EA9B22864CC550078D4CD /* ObjectRecogViewController.xib in Resources */,
-				011EA9DB286704350078D4CD /* TabExploreViewController.xib in Resources */,
-				011EA9FD286C4DBD0078D4CD /* CategoryTableViewCell.xib in Resources */,
+				01AE7EE528B5D36400CDB9CE /* HelpModalVC.xib in Resources */,
 				01B9725228729921007F1521 /* clock.mp3 in Resources */,
 				01AE7EE028B527FE00CDB9CE /* ResultTutorialViewController.xib in Resources */,
 				B84E36B028B3495E004A3087 /* LaunchScreen.storyboard in Resources */,
@@ -846,9 +816,7 @@
 				011EA9B42864E4750078D4CD /* AppUtility.swift in Sources */,
 				01E538CC28AF73630017BFE4 /* RecognizeData.xcdatamodeld in Sources */,
 				01E538D128AF744B0017BFE4 /* Item+CoreDataClass.swift in Sources */,
-				011EA9FC286C4DBD0078D4CD /* CategoryTableViewCell.swift in Sources */,
 				B84C9DBA28B327210067E305 /* HomeVC.swift in Sources */,
-				011EA9DA286704350078D4CD /* TabExploreViewController.swift in Sources */,
 				B84C9DAC28B327160067E305 /* UIColor+Extension.swift in Sources */,
 				011EAA03286DC7F10078D4CD /* Logger.swift in Sources */,
 				B84E36AD28B34887004A3087 /* StorytellingVC.swift in Sources */,
@@ -857,6 +825,7 @@
 				01E538D328AF744B0017BFE4 /* Category+CoreDataClass.swift in Sources */,
 				0124C7E3286435C0001A4D58 /* Measure.swift in Sources */,
 				01AE7EDF28B527FE00CDB9CE /* ResultTutorialViewController.swift in Sources */,
+				01AE7EE428B5D36400CDB9CE /* HelpModalVC.swift in Sources */,
 				0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */,
 				0124C7E12864355E001A4D58 /* ViewCapture.swift in Sources */,
 				011EA9F0286843B00078D4CD /* RecognationModel.swift in Sources */,
@@ -870,7 +839,6 @@
 				01AE7EDA28B50D1300CDB9CE /* TutorialContentViewController.swift in Sources */,
 				01554D3428617159008AEA27 /* AppDelegate.swift in Sources */,
 				B843735428B3C63400A8A19E /* StorytellingObjectCell.swift in Sources */,
-				01B972582872B25E007F1521 /* CustomAllertViewController.swift in Sources */,
 				014093F428B34EB700B6BF54 /* FeedbackView.swift in Sources */,
 				011EA9BD286564210078D4CD /* OnBoardingContentViewController.swift in Sources */,
 				B84C9DBF28B3272A0067E305 /* ResultModalVC.swift in Sources */,
@@ -1037,12 +1005,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ExploreCare/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ExploreCare;
-				INFOPLIST_KEY_NSCameraUsageDescription = "App requires acces to your camera to allow you to take a photo of your ID to process your request";
+				INFOPLIST_KEY_NSCameraUsageDescription = "App requires access to your camera to allow you to take a photo of your ID to process your request";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
@@ -1055,7 +1023,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rrdev.ExploreCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1072,12 +1040,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ExploreCare/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ExploreCare;
-				INFOPLIST_KEY_NSCameraUsageDescription = "App requires acces to your camera to allow you to take a photo of your ID to process your request";
+				INFOPLIST_KEY_NSCameraUsageDescription = "App requires access to your camera to allow you to take a photo of your ID to process your request";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
@@ -1090,7 +1058,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rrdev.ExploreCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1109,13 +1077,13 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = ExploreCareW_WatchKit_Extension;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = rrdev.ExploreCare;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rrdev.ExploreCare.watchkitapp;
 				PRODUCT_NAME = ExploreCare;
 				SDKROOT = watchos;
@@ -1136,13 +1104,13 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = ExploreCareW_WatchKit_Extension;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = rrdev.ExploreCare;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rrdev.ExploreCare.watchkitapp;
 				PRODUCT_NAME = ExploreCare;
 				SDKROOT = watchos;
@@ -1159,7 +1127,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"ExploreCareW WatchKit Extension/SupportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				ENABLE_PREVIEWS = YES;
@@ -1174,7 +1142,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rrdev.ExploreCare.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -1191,7 +1159,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"ExploreCareW WatchKit Extension/SupportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				ENABLE_PREVIEWS = YES;
@@ -1206,7 +1174,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rrdev.ExploreCare.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;

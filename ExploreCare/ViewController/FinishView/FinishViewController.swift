@@ -24,7 +24,6 @@ class FinishViewController: UIViewController {
     }
     
     private func setupView() {
-        AppUtility.lockOrientation(.landscapeRight)
         finishButton.layer.cornerRadius = 8
         playAgainButton.layer.cornerRadius = 8
         descLabel.text = "You’ve complate level \(level), let’s find more, keep it up 💪"
@@ -39,6 +38,6 @@ class FinishViewController: UIViewController {
     
     @IBAction func finishButton(_ sender: Any) {
         guard let window = UIApplication.shared.keyWindow else {return}
-        window.rootViewController = TabExploreViewController()
+        window.rootViewController = HomeVC()
     }
 }
