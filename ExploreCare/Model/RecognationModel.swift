@@ -65,10 +65,11 @@ extension Category {
             ]),
             
             Category(id: 3, categoryName: "Bedroom", categoryImage: UIImage(named: "background_bedroom")!, isLockLevel: false, storyTellingText: storyTelling(type: "bedroom"), charImage: UIImage(named: "ic_char_iky")!, object: [
+                ObjectRecog(id: 4, name: "Bottle", objectName: "bottle", descriptionName: "Iky is filling up his water bottle.", objectImage: UIImage(named: "ic_bottle")!, objectImageString: "ic_bottle", objectImageLabel: UIImage(named: "ic_bottle_label")!),
                 ObjectRecog(id: 1, name: "Clock", objectName: "clock", descriptionName: "Iky bought a new clock yesterday.", objectImage: UIImage(named: "ic_clock")!, objectImageString: "ic_clock", objectImageLabel: UIImage(named: "ic_clock_label")!),
                 ObjectRecog(id: 2, name: "Laptop", objectName: "laptop", descriptionName: "Iky is turning off his laptop.", objectImage: UIImage(named: "ic_laptop")!, objectImageString: "ic_laptop", objectImageLabel: UIImage(named: "ic_laptop_label")!),
-                ObjectRecog(id: 4, name: "Bottle", objectName: "bottle", descriptionName: "Iky is filling up his water bottle.", objectImage: UIImage(named: "ic_bottle")!, objectImageString: "ic_bottle", objectImageLabel: UIImage(named: "ic_bottle_label")!),
-                ObjectRecog(id: 5, name: "Book", objectName: "book", descriptionName: "Iky loves to read his comic book.", objectImage: UIImage(named: "ic_book")!, objectImageString: "ic_book", objectImageLabel: UIImage(named: "ic_book_label")!)
+                ObjectRecog(id: 5, name: "Book", objectName: "book", descriptionName: "Iky loves to read his comic book.", objectImage: UIImage(named: "ic_book")!, objectImageString: "ic_book", objectImageLabel: UIImage(named: "ic_book_label")!),
+                ObjectRecog(id: 5, name: "Backpack", objectName: "backpack", descriptionName: "Iky puts his sandwich in the backpack.", objectImage: UIImage(named: "ic_backpack")!, objectImageString: "ic_backpack", objectImageLabel: UIImage(named: "ic_backpack_label")!)
             ]),
             
             Category(id: 4, categoryName: "Garden", categoryImage: UIImage(named: "background_garden")!, isLockLevel: false, storyTellingText: storyTelling(type: "garden"), charImage: UIImage(named: "ic_char_rass")!, object: [
@@ -101,11 +102,7 @@ extension Category {
                 ObjectRecog(id: 3, name: "Bicycle", objectName: "bicycle", descriptionName: "Iky goes to the park with his bicycle.", objectImage: UIImage(named: "ic_bicycle")!, objectImageString: "ic_bicycle", objectImageLabel: UIImage(named: "ic_bicycle_label")!),
                 ObjectRecog(id: 4, name: "Car", objectName: "car", descriptionName: "Iky counts all the passing car.", objectImage: UIImage(named: "ic_car")!, objectImageString: "ic_car", objectImageLabel: UIImage(named: "ic_car_label")!),
                 ObjectRecog(id: 5, name: "Motorbike", objectName: "motorbike", descriptionName: "Iky rides the motorbike with his brother.", objectImage: UIImage(named: "ic_motorbike")!, objectImageString: "ic_motorbike", objectImageLabel: UIImage(named: "ic_motorbike_label")!)
-            ]),
-            
-            Category(id: 8, categoryName: "Test1", categoryImage: UIImage(systemName: "trash.circle.fill")!, isLockLevel: true, storyTellingText: "", charImage: UIImage(named: "ic_char_iky")!, object: []),
-            
-            Category(id: 9, categoryName: "Test2", categoryImage: UIImage(systemName: "trash.circle.fill")!, isLockLevel: true, storyTellingText: "", charImage: UIImage(named: "ic_char_iky")!, object: [])
+            ])
         ]
     }
 }
