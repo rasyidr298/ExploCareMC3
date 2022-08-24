@@ -42,9 +42,17 @@ struct FeedbackView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 20))
                 .onTapGesture {
-                    //to home vc
+                    if let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
+                        for controller in navigationController.viewControllers {
+                            if controller is HomeVC {
+                                navigationController.popToViewController(controller, animated: true)
+                            }
+                        }
+                    }
                 }
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
         .background(
             Image("bg_feedback")
                 .resizable()

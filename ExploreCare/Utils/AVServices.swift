@@ -10,7 +10,10 @@ import AVFoundation
 
 class AVService{
     var player : AVAudioPlayer?
+    
     static let shared = AVService()
+    
+    private init() {}
     
     func playMusic(name: String, type: String){
         //akses alamat
