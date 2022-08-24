@@ -62,6 +62,8 @@
 		01AE7EE028B527FE00CDB9CE /* ResultTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AE7EDE28B527FE00CDB9CE /* ResultTutorialViewController.xib */; };
 		01AE7EE428B5D36400CDB9CE /* HelpModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AE7EE228B5D36400CDB9CE /* HelpModalVC.swift */; };
 		01AE7EE528B5D36400CDB9CE /* HelpModalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AE7EE328B5D36400CDB9CE /* HelpModalVC.xib */; };
+		01AE7EEC28B5E88700CDB9CE /* HelpModalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AE7EEA28B5E88700CDB9CE /* HelpModalVC.xib */; };
+		01AE7EED28B5E88700CDB9CE /* HelpModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AE7EEB28B5E88700CDB9CE /* HelpModalVC.swift */; };
 		01B972482872851A007F1521 /* correct.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 01B972472872851A007F1521 /* correct.aiff */; };
 		01B9724F28729921007F1521 /* cup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724928729920007F1521 /* cup.mp3 */; };
 		01B9725028729921007F1521 /* backpack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724A28729920007F1521 /* backpack.mp3 */; };
@@ -195,6 +197,8 @@
 		01AE7EDE28B527FE00CDB9CE /* ResultTutorialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTutorialViewController.xib; sourceTree = "<group>"; };
 		01AE7EE228B5D36400CDB9CE /* HelpModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpModalVC.swift; sourceTree = "<group>"; };
 		01AE7EE328B5D36400CDB9CE /* HelpModalVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpModalVC.xib; sourceTree = "<group>"; };
+		01AE7EEA28B5E88700CDB9CE /* HelpModalVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpModalVC.xib; sourceTree = "<group>"; };
+		01AE7EEB28B5E88700CDB9CE /* HelpModalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpModalVC.swift; sourceTree = "<group>"; };
 		01B972472872851A007F1521 /* correct.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = correct.aiff; sourceTree = "<group>"; };
 		01B9724928729920007F1521 /* cup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cup.mp3; sourceTree = "<group>"; };
 		01B9724A28729920007F1521 /* backpack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backpack.mp3; sourceTree = "<group>"; };
@@ -418,6 +422,7 @@
 				0186D0FA287FC2BE006540C1 /* ExploreCareW */,
 				0186D105287FC2BF006540C1 /* ExploreCareW WatchKit Extension */,
 				01554D3128617159008AEA27 /* Products */,
+				01AE7EE628B5E7DB00CDB9CE /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -449,6 +454,7 @@
 		01554D47286171C0008AEA27 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				01AE7EE928B5E88700CDB9CE /* Help Modal */,
 				B8905C9428B5CEAC00D98127 /* Adventure Modal */,
 				01AE7ECC28B50B4900CDB9CE /* Tutorial */,
 				014093E628B34A6300B6BF54 /* Feedback Feature */,
@@ -571,11 +577,20 @@
 			path = Result;
 			sourceTree = "<group>";
 		};
-		01AE7EE128B5D33700CDB9CE /* Help Modal */ = {
+		01AE7EE628B5E7DB00CDB9CE /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				01AE7EE228B5D36400CDB9CE /* HelpModalVC.swift */,
 				01AE7EE328B5D36400CDB9CE /* HelpModalVC.xib */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		01AE7EE928B5E88700CDB9CE /* Help Modal */ = {
+			isa = PBXGroup;
+			children = (
+				01AE7EEA28B5E88700CDB9CE /* HelpModalVC.xib */,
+				01AE7EEB28B5E88700CDB9CE /* HelpModalVC.swift */,
 			);
 			path = "Help Modal";
 			sourceTree = "<group>";
@@ -776,6 +791,7 @@
 				011EA9C828656B870078D4CD /* OnBoardingPageViewController.xib in Resources */,
 				01B9725028729921007F1521 /* backpack.mp3 in Resources */,
 				011EA9B22864CC550078D4CD /* ObjectRecogViewController.xib in Resources */,
+				01AE7EEC28B5E88700CDB9CE /* HelpModalVC.xib in Resources */,
 				01AE7EE528B5D36400CDB9CE /* HelpModalVC.xib in Resources */,
 				01B9725228729921007F1521 /* clock.mp3 in Resources */,
 				01AE7EE028B527FE00CDB9CE /* ResultTutorialViewController.xib in Resources */,
@@ -840,6 +856,7 @@
 				011EAA03286DC7F10078D4CD /* Logger.swift in Sources */,
 				B84E36AD28B34887004A3087 /* StorytellingVC.swift in Sources */,
 				011EA9BB286564030078D4CD /* OnBoardingPageViewController.swift in Sources */,
+				01AE7EED28B5E88700CDB9CE /* HelpModalVC.swift in Sources */,
 				01E538E328B2AB840017BFE4 /* AVServices.swift in Sources */,
 				01E538D328AF744B0017BFE4 /* Category+CoreDataClass.swift in Sources */,
 				0124C7E3286435C0001A4D58 /* Measure.swift in Sources */,
