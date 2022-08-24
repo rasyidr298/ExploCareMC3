@@ -12,14 +12,8 @@
 		0116AC332886ED1C00840F81 /* HapticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0116AC322886ED1C00840F81 /* HapticsView.swift */; };
 		011EA9B22864CC550078D4CD /* ObjectRecogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */; };
 		011EA9B42864E4750078D4CD /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9B32864E4750078D4CD /* AppUtility.swift */; };
-		011EA9B7286562580078D4CD /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9B6286562580078D4CD /* OnBoardingViewController.xib */; };
-		011EA9BB286564030078D4CD /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BA286564030078D4CD /* OnBoardingPageViewController.swift */; };
-		011EA9BD286564210078D4CD /* OnBoardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BC286564210078D4CD /* OnBoardingContentViewController.swift */; };
-		011EA9BF286564410078D4CD /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BE286564410078D4CD /* OnBoardingViewController.swift */; };
 		011EA9C32865651C0078D4CD /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9C22865651C0078D4CD /* Haptics.swift */; };
 		011EA9C52865653F0078D4CD /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9C42865653F0078D4CD /* Constans.swift */; };
-		011EA9C828656B870078D4CD /* OnBoardingPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9C728656B870078D4CD /* OnBoardingPageViewController.xib */; };
-		011EA9CA28656BD90078D4CD /* OnBoardingContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9C928656BD90078D4CD /* OnBoardingContentViewController.xib */; };
 		011EA9F0286843B00078D4CD /* RecognationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9EF286843B00078D4CD /* RecognationModel.swift */; };
 		011EAA01286D9D100078D4CD /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EAA00286D9D100078D4CD /* View.swift */; };
 		011EAA03286DC7F10078D4CD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EAA02286DC7F10078D4CD /* Logger.swift */; };
@@ -163,11 +157,15 @@
 		B84C9DBF28B3272A0067E305 /* ResultModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C9DBD28B3272A0067E305 /* ResultModalVC.swift */; };
 		B84E36AD28B34887004A3087 /* StorytellingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E36AB28B34887004A3087 /* StorytellingVC.swift */; };
 		B84E36AE28B34887004A3087 /* StorytellingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84E36AC28B34887004A3087 /* StorytellingVC.xib */; };
-		B87B8CE928B672600083A644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87B8CE428B672600083A644 /* Main.storyboard */; };
+		B87B8CE928B672600083A644 /* InputName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87B8CE428B672600083A644 /* InputName.storyboard */; };
 		B87B8CEA28B672600083A644 /* NameField.xib in Resources */ = {isa = PBXBuildFile; fileRef = B87B8CE528B672600083A644 /* NameField.xib */; };
 		B87B8CEB28B672600083A644 /* InputNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87B8CE628B672600083A644 /* InputNameViewController.swift */; };
 		B87B8CEC28B672600083A644 /* NameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87B8CE728B672600083A644 /* NameField.swift */; };
 		B87B8CEE28B6732E0083A644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87B8CED28B6732E0083A644 /* LaunchScreen.storyboard */; };
+		B87B8CFF28B6784B0083A644 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87B8CF728B6784B0083A644 /* OnboardingCollectionViewCell.swift */; };
+		B87B8D0028B6784B0083A644 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87B8CF828B6784B0083A644 /* OnBoardingViewController.swift */; };
+		B87B8D0128B6784B0083A644 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87B8CF928B6784B0083A644 /* OnboardingSlide.swift */; };
+		B87B8D0228B6784B0083A644 /* OnboardingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87B8CFA28B6784B0083A644 /* OnboardingViewController.storyboard */; };
 		B8905C9328B5CA2C00D98127 /* background_music.mpeg in Resources */ = {isa = PBXBuildFile; fileRef = B8905C9228B5CA2C00D98127 /* background_music.mpeg */; };
 		B8905C9728B5CED100D98127 /* AdventureModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8905C9528B5CED100D98127 /* AdventureModalVC.swift */; };
 		B8905C9828B5CED100D98127 /* AdventureModalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8905C9628B5CED100D98127 /* AdventureModalVC.xib */; };
@@ -223,14 +221,8 @@
 		0116AC322886ED1C00840F81 /* HapticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsView.swift; sourceTree = "<group>"; };
 		011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectRecogViewController.xib; sourceTree = "<group>"; };
 		011EA9B32864E4750078D4CD /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
-		011EA9B6286562580078D4CD /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
-		011EA9BA286564030078D4CD /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
-		011EA9BC286564210078D4CD /* OnBoardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContentViewController.swift; sourceTree = "<group>"; };
-		011EA9BE286564410078D4CD /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		011EA9C22865651C0078D4CD /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		011EA9C42865653F0078D4CD /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
-		011EA9C728656B870078D4CD /* OnBoardingPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingPageViewController.xib; sourceTree = "<group>"; };
-		011EA9C928656BD90078D4CD /* OnBoardingContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingContentViewController.xib; sourceTree = "<group>"; };
 		011EA9EF286843B00078D4CD /* RecognationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognationModel.swift; sourceTree = "<group>"; };
 		011EAA00286D9D100078D4CD /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		011EAA02286DC7F10078D4CD /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -379,11 +371,15 @@
 		B84C9DBD28B3272A0067E305 /* ResultModalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultModalVC.swift; sourceTree = "<group>"; };
 		B84E36AB28B34887004A3087 /* StorytellingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytellingVC.swift; sourceTree = "<group>"; };
 		B84E36AC28B34887004A3087 /* StorytellingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StorytellingVC.xib; sourceTree = "<group>"; };
-		B87B8CE428B672600083A644 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B87B8CE428B672600083A644 /* InputName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InputName.storyboard; sourceTree = "<group>"; };
 		B87B8CE528B672600083A644 /* NameField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NameField.xib; sourceTree = "<group>"; };
 		B87B8CE628B672600083A644 /* InputNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputNameViewController.swift; sourceTree = "<group>"; };
 		B87B8CE728B672600083A644 /* NameField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameField.swift; sourceTree = "<group>"; };
 		B87B8CED28B6732E0083A644 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B87B8CF728B6784B0083A644 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		B87B8CF828B6784B0083A644 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		B87B8CF928B6784B0083A644 /* OnboardingSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		B87B8CFA28B6784B0083A644 /* OnboardingViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnboardingViewController.storyboard; sourceTree = "<group>"; };
 		B8905C9228B5CA2C00D98127 /* background_music.mpeg */ = {isa = PBXFileReference; lastKnownFileType = video.mpeg; path = background_music.mpeg; sourceTree = "<group>"; };
 		B8905C9528B5CED100D98127 /* AdventureModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureModalVC.swift; sourceTree = "<group>"; };
 		B8905C9628B5CED100D98127 /* AdventureModalVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdventureModalVC.xib; sourceTree = "<group>"; };
@@ -475,48 +471,12 @@
 			path = music;
 			sourceTree = "<group>";
 		};
-		011EA9B5286561E90078D4CD /* OnBoarding */ = {
-			isa = PBXGroup;
-			children = (
-				011EA9D42867033C0078D4CD /* View */,
-				011EA9D3286703340078D4CD /* PageView */,
-				011EA9D2286703280078D4CD /* Content */,
-			);
-			path = OnBoarding;
-			sourceTree = "<group>";
-		};
-		011EA9D2286703280078D4CD /* Content */ = {
-			isa = PBXGroup;
-			children = (
-				011EA9BC286564210078D4CD /* OnBoardingContentViewController.swift */,
-				011EA9C928656BD90078D4CD /* OnBoardingContentViewController.xib */,
-			);
-			path = Content;
-			sourceTree = "<group>";
-		};
-		011EA9D3286703340078D4CD /* PageView */ = {
-			isa = PBXGroup;
-			children = (
-				011EA9BA286564030078D4CD /* OnBoardingPageViewController.swift */,
-				011EA9C728656B870078D4CD /* OnBoardingPageViewController.xib */,
-			);
-			path = PageView;
-			sourceTree = "<group>";
-		};
-		011EA9D42867033C0078D4CD /* View */ = {
-			isa = PBXGroup;
-			children = (
-				011EA9BE286564410078D4CD /* OnBoardingViewController.swift */,
-				011EA9B6286562580078D4CD /* OnBoardingViewController.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		0124C7D32862DB32001A4D58 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				0124C7D42862FC6C001A4D58 /* YOLOv3Tiny */,
 				011EA9EF286843B00078D4CD /* RecognationModel.swift */,
+				B87B8CF928B6784B0083A644 /* OnboardingSlide.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -632,7 +592,7 @@
 				B84C9DBB28B3272A0067E305 /* Result Modal */,
 				B84C9DAD28B327210067E305 /* Home */,
 				013458B22871AE2100BCAAE6 /* FinishView */,
-				011EA9B5286561E90078D4CD /* OnBoarding */,
+				B87B8CEF28B6784B0083A644 /* OnBoarding */,
 				0124C7DD2864313A001A4D58 /* ObjectRecog */,
 			);
 			path = ViewController;
@@ -1033,12 +993,22 @@
 		B87B8CE228B672600083A644 /* InputName */ = {
 			isa = PBXGroup;
 			children = (
-				B87B8CE428B672600083A644 /* Main.storyboard */,
+				B87B8CE428B672600083A644 /* InputName.storyboard */,
 				B87B8CE528B672600083A644 /* NameField.xib */,
 				B87B8CE628B672600083A644 /* InputNameViewController.swift */,
 				B87B8CE728B672600083A644 /* NameField.swift */,
 			);
 			path = InputName;
+			sourceTree = "<group>";
+		};
+		B87B8CEF28B6784B0083A644 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				B87B8CF728B6784B0083A644 /* OnboardingCollectionViewCell.swift */,
+				B87B8CF828B6784B0083A644 /* OnBoardingViewController.swift */,
+				B87B8CFA28B6784B0083A644 /* OnboardingViewController.storyboard */,
+			);
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 		B8905C9428B5CEAC00D98127 /* Adventure Modal */ = {
@@ -1176,7 +1146,6 @@
 				01B972482872851A007F1521 /* correct.aiff in Resources */,
 				B843735528B3C63400A8A19E /* StorytellingObjectCell.xib in Resources */,
 				01733E0828B61F5300DA979B /* Good Job Tep.mp3 in Resources */,
-				011EA9C828656B870078D4CD /* OnBoardingPageViewController.xib in Resources */,
 				01733E1128B61F5300DA979B /* Find Motorbike.mp3 in Resources */,
 				01733E6928B621FD00DA979B /* Find Remote.mp3 in Resources */,
 				01733E0B28B61F5300DA979B /* Find Book.mp3 in Resources */,
@@ -1188,7 +1157,7 @@
 				01733E1C28B61F5300DA979B /* Motorbike.mp3 in Resources */,
 				01733E9828B6221C00DA979B /* Instruction.mp3 in Resources */,
 				01733E9428B6221C00DA979B /* Ras Introduction.mp3 in Resources */,
-				B87B8CE928B672600083A644 /* Main.storyboard in Resources */,
+				B87B8CE928B672600083A644 /* InputName.storyboard in Resources */,
 				01733E7B28B621FD00DA979B /* Ras Plays in Garden.mp3 in Resources */,
 				B8905CAE28B5EBA800D98127 /* HelpModalVC.xib in Resources */,
 				01733E1A28B61F5300DA979B /* Bicycle.mp3 in Resources */,
@@ -1206,6 +1175,7 @@
 				01733E8528B621FD00DA979B /* Find Elephant.mp3 in Resources */,
 				01733E7328B621FD00DA979B /* Find Fork.mp3 in Resources */,
 				01733E2F28B61F5300DA979B /* Good Job Manda.mp3 in Resources */,
+				B87B8D0228B6784B0083A644 /* OnboardingViewController.storyboard in Resources */,
 				01733E1828B61F5300DA979B /* Truck.mp3 in Resources */,
 				01733E7F28B621FD00DA979B /* Find Apple.mp3 in Resources */,
 				01733E6B28B621FD00DA979B /* Find Chair.mp3 in Resources */,
@@ -1217,7 +1187,6 @@
 				01733E1228B61F5300DA979B /* Find Car.mp3 in Resources */,
 				01733E1E28B61F5300DA979B /* Laptop.mp3 in Resources */,
 				01733E2728B61F5300DA979B /* Bowl.mp3 in Resources */,
-				011EA9B7286562580078D4CD /* OnBoardingViewController.xib in Resources */,
 				01733E2E28B61F5300DA979B /* Clock.mp3 in Resources */,
 				01733E8228B621FD00DA979B /* Find Carrot.mp3 in Resources */,
 				01733E3B28B61F5300DA979B /* Umbrella.mp3 in Resources */,
@@ -1226,7 +1195,6 @@
 				01733E2128B61F5300DA979B /* Book.mp3 in Resources */,
 				01733E0D28B61F5300DA979B /* Iki Preparing For School and Bed.mp3 in Resources */,
 				01733E6728B621FD00DA979B /* Find Monitor.mp3 in Resources */,
-				011EA9CA28656BD90078D4CD /* OnBoardingContentViewController.xib in Resources */,
 				01AE7ED328B50CDC00CDB9CE /* TutorialPageViewController.xib in Resources */,
 				01733E7828B621FD00DA979B /* Find Bench.mp3 in Resources */,
 				01733E3A28B61F5300DA979B /* Vase.mp3 in Resources */,
@@ -1315,8 +1283,9 @@
 				B84C9DAC28B327160067E305 /* UIColor+Extension.swift in Sources */,
 				011EAA03286DC7F10078D4CD /* Logger.swift in Sources */,
 				B84E36AD28B34887004A3087 /* StorytellingVC.swift in Sources */,
-				011EA9BB286564030078D4CD /* OnBoardingPageViewController.swift in Sources */,
 				01E538E328B2AB840017BFE4 /* AVServices.swift in Sources */,
+				B87B8CFF28B6784B0083A644 /* OnboardingCollectionViewCell.swift in Sources */,
+				B87B8D0128B6784B0083A644 /* OnboardingSlide.swift in Sources */,
 				01E538D328AF744B0017BFE4 /* Category+CoreDataClass.swift in Sources */,
 				0124C7E3286435C0001A4D58 /* Measure.swift in Sources */,
 				01AE7EDF28B527FE00CDB9CE /* ResultTutorialViewController.swift in Sources */,
@@ -1326,6 +1295,7 @@
 				01AE7ED628B50CF700CDB9CE /* TutorialViewController.swift in Sources */,
 				011EA9C52865653F0078D4CD /* Constans.swift in Sources */,
 				01E538D228AF744B0017BFE4 /* Item+CoreDataProperties.swift in Sources */,
+				B87B8D0028B6784B0083A644 /* OnBoardingViewController.swift in Sources */,
 				01AE7ED228B50CDC00CDB9CE /* TutorialPageViewController.swift in Sources */,
 				011EAA01286D9D100078D4CD /* View.swift in Sources */,
 				014093EE28B34B7100B6BF54 /* Carousel.swift in Sources */,
@@ -1334,14 +1304,12 @@
 				01554D3428617159008AEA27 /* AppDelegate.swift in Sources */,
 				B843735428B3C63400A8A19E /* StorytellingObjectCell.swift in Sources */,
 				014093F428B34EB700B6BF54 /* FeedbackView.swift in Sources */,
-				011EA9BD286564210078D4CD /* OnBoardingContentViewController.swift in Sources */,
 				B84C9DBF28B3272A0067E305 /* ResultModalVC.swift in Sources */,
 				0124C7DF28643427001A4D58 /* DrawingBoundingBoxView.swift in Sources */,
 				0157CA66288854100008B287 /* ObjectRecogViewModel.swift in Sources */,
 				B87B8CEB28B672600083A644 /* InputNameViewController.swift in Sources */,
 				01E538D428AF744B0017BFE4 /* Category+CoreDataProperties.swift in Sources */,
 				B87B8CEC28B672600083A644 /* NameField.swift in Sources */,
-				011EA9BF286564410078D4CD /* OnBoardingViewController.swift in Sources */,
 				014093F028B34C4400B6BF54 /* ItemCarouselView.swift in Sources */,
 				B84C9DB828B327210067E305 /* LevelSectionCell.swift in Sources */,
 				013458B52871AE5300BCAAE6 /* FinishViewController.swift in Sources */,
@@ -1505,7 +1473,7 @@
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ExploreCare/SupportingFiles/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ExploreCare;
+				INFOPLIST_KEY_CFBundleDisplayName = ExploCare;
 				INFOPLIST_KEY_NSCameraUsageDescription = "App requires access to your camera to allow you to take a photo of your ID to process your request";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1540,7 +1508,7 @@
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ExploreCare/SupportingFiles/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ExploreCare;
+				INFOPLIST_KEY_CFBundleDisplayName = ExploCare;
 				INFOPLIST_KEY_NSCameraUsageDescription = "App requires access to your camera to allow you to take a photo of your ID to process your request";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

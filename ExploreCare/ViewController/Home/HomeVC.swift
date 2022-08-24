@@ -29,8 +29,10 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+        setupUI()
         updateView()
+        
+        removeOnboardingFromNavigationHierarchy()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,13 +45,13 @@ class HomeVC: UIViewController {
     }
     
     // MARK: - UI Setups
-    private func setupTableView() {
+    private func setupUI() {
         levelTableView.delegate = self
         levelTableView.dataSource = self
         levelTableView.allowsSelection = false
         levelTableView.register(UINib(nibName: "LevelSectionCell", bundle: nil), forCellReuseIdentifier: LevelSectionCell.REUSE_IDENTIFIER)
         
-        nameLabel.text = udUserName
+        nameLabel.text = UserDefaults.standard.string(forKey: udUserNameKey)?.capitalized
     }
     
     // MARK: - Custom Functions
@@ -60,6 +62,11 @@ class HomeVC: UIViewController {
         } else {
             helpButton.isHidden = true
         }
+    }
+    
+    private func removeOnboardingFromNavigationHierarchy() {
+        navigationController?.viewControllers.removeAll(where: { $0 is OnboardingViewController })
+        navigationController?.viewControllers.removeAll(where: { $0 is InputNameViewController })
     }
     
     private func navigateToLevel(category: Category) {

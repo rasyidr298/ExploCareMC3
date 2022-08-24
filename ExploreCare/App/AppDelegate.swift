@@ -15,10 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let navigationController = UINavigationController(rootViewController: HomeVC())
+        let navigationController: UINavigationController!
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        if !udIsShowOnBoard {
+            let vc = UIStoryboard(name: "OnboardingViewController", bundle: nil).instantiateViewController(withIdentifier: "OnboardingViewController")
+            navigationController = UINavigationController(rootViewController: vc)
+        } else {
+            navigationController = UINavigationController(rootViewController: HomeVC())
+        }
+        
         navigationController.setNavigationBarHidden(true, animated: false)
         
-        window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
