@@ -49,12 +49,10 @@ class TutorialViewController: UIViewController {
             previousButton.isHidden = false
         }else {
             toObjectRecogVC()
-            UserDefaults.standard.set(true, forKey: udIsShowTutorialKey)
         }
     }
     @IBAction func skipButton(_ sender: Any) {
         toObjectRecogVC()
-        UserDefaults.standard.set(true, forKey: udIsShowTutorialKey)
     }
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true)

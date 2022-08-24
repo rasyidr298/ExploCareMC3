@@ -54,6 +54,7 @@ class HomeVC: UIViewController {
     
     // MARK: - Custom Functions
     private func updateView() {
+        let udIsShowTutorial = UserDefaults.standard.bool(forKey: udIsShowTutorialKey)
         if udIsShowTutorial {
             helpButton.isHidden = false
         } else {
@@ -62,6 +63,7 @@ class HomeVC: UIViewController {
     }
     
     private func navigateToLevel(category: Category) {
+        let udIsShowTutorial = UserDefaults.standard.bool(forKey: udIsShowTutorialKey)
         if udIsShowTutorial {
             let vc = StorytellingVC(category: category)
             self.present(vc, animated: true)
