@@ -40,10 +40,9 @@ class ObjectRecogViewController: UIViewController {
     let semaphore = DispatchSemaphore(value: 1)
     var lastExecution = Date()
     
-    var timer = Timer()
-    var confettiCouter = 60
+    var helpTimer = Timer()
+    var helpCouter = 60
     var matchIndex = 0
-    let confettiView = KConfettiView()
     var indexList: [Int] = []
     
     var viewModel = ObjectRecogViewModel()
@@ -162,39 +161,9 @@ extension ObjectRecogViewController {
     }
 }
 
-// MARK: - CustomAllert
-extension ObjectRecogViewController: CustomAlertDelegate {
-    func onNextButttonPressed(_ alert: CustomAllertViewController, objectRecog: ObjectRecog) {
-        
-        timer.invalidate()
-        stopConfetti()
-        
-        if indexObjectRecog >= 5 {
-            indexObjectRecog = 0
-            guideDescLabel.text = "\(textFirstGuide()), let's find "
-            guideObjectName.text = category!.object[indexObjectRecog].name
-            objectImageView.image = (category?.object[0].objectImage)!
-            
-            //to celebrate viewcontroller
-        }else {
-            guideDescLabel.text = "\(textFirstGuide()), let's find "
-            guideObjectName.text = category!.object[indexObjectRecog].name
-            objectImageView.image = (category?.object[indexObjectRecog].objectImage)!
-        }
-        
-        viewModel.sendMessageToIwatch(name: udUserName, time: 0, startExplore: true)
-    }
-    
-    func onSpeakerButttonPressed(_ alert: CustomAllertViewController, objectRecog: ObjectRecog) {
-        AVService.shared.playObjectSound(player: player, objectRecog: objectRecog)
-    }
-}
-
+// MARK: - ResultModalDelegate
 extension ObjectRecogViewController: ResultModalDelegate {
     func onNextButttonPressed(){
-        timer.invalidate()
-        stopConfetti()
-        
         if isTutorial {
             print("result screen")
             let vc = ResultTutorialViewController()
@@ -207,7 +176,8 @@ extension ObjectRecogViewController: ResultModalDelegate {
                 guideObjectName.text = category!.object[indexObjectRecog].name
                 objectImageView.image = (category?.object[0].objectImage)!
                 
-                //to celebrate viewcontroller
+                startHelpTimer()
+                
                 //to feedback page
                 let feedbackView = UIHostingController(rootView: FeedbackView(object: category!.object))
                 navigationController?.pushViewController(feedbackView, animated: true)
@@ -227,50 +197,38 @@ extension ObjectRecogViewController: ResultModalDelegate {
     }
 }
 
+// MARK: - HelpModalDelegate
+extension ObjectRecogViewController: HelpModalDelegate {
+    func onCloseButton() {
+        startHelpTimer()
+    }
+}
+
 // MARK: - Custom function
 extension ObjectRecogViewController {
     
-    @objc func updateCounter() {
-        if confettiCouter > 0 {
-            print("\(confettiCouter) show confetti")
-            confettiCouter -= 1
+    @objc func updateHelpTimerCounter() {
+        if helpCouter > 0 {
+            print("\(helpCouter) to show help modal")
+            helpCouter -= 1
         }else {
-            stopConfetti()
+            showHelpModal()
         }
     }
     
     func setupView() {
         bgLevelView.layer.cornerRadius = 12
         objectImageView.layer.cornerRadius = 12
-        AppUtility.lockOrientation(.landscapeRight)
         levelLabel.text = category?.categoryName
         charImageView.image = category?.charImage
         guideDescLabel.text = "\(textFirstGuide()), let's find "
         guideObjectName.text = category!.object[indexObjectRecog].name
         objectImageView.image = (category?.object[indexObjectRecog].objectImage)!
+        startHelpTimer()
     }
     
     func resizePreviewLayer() {
         videoCapture.previewLayer?.frame = cameraView.bounds
-    }
-    
-    func stopConfetti() {
-        confettiView.removeFromSuperview()
-    }
-    
-    func showConfetti() {
-        confettiView.frame = view.bounds
-        confettiView.setup()
-        view.addSubview(confettiView)
-    }
-    
-    @available(*, deprecated, renamed: "showResultModal(object:)")
-    func showCustomAllert(objectRecog: ObjectRecog) {
-        let customAllert = CustomAllertViewController()
-        customAllert.objectRecog = objectRecog
-        customAllert.indextObject = indexObjectRecog
-        customAllert.delegate = self
-        customAllert.show()
     }
     
     func showResultModal(object: ObjectRecog) {
@@ -279,12 +237,23 @@ extension ObjectRecogViewController {
         present(resultModal, animated: true)
     }
     
+    func showHelpModal() {
+        helpTimer.invalidate()
+        let helpModal = HelpModalVC()
+        helpModal.delegate = self
+        present(helpModal, animated: true)
+    }
+    
+    func startHelpTimer() {
+        helpCouter = 60
+        helpTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateHelpTimerCounter), userInfo: nil, repeats: true)
+    }
+    
     func matchingObject(objectRecog: ObjectRecog) {
         DispatchQueue.main.async { [unowned self] in
-            showConfetti()
             showResultModal(object: objectRecog)
+
             AVService.shared.playAdditionalSound(player: player, type: "correct")
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
             
             //push value to iwatch
             viewModel.sendMessageToIwatch(name: udUserName, time: 0, startExplore: false)
