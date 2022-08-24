@@ -186,7 +186,7 @@ extension ObjectRecogViewController: CustomAlertDelegate {
     }
     
     func onSpeakerButttonPressed(_ alert: CustomAllertViewController, objectRecog: ObjectRecog) {
-        playObjectSound(player: player, objectRecog: objectRecog)
+        AVService.shared.playObjectSound(player: player, objectRecog: objectRecog)
     }
 }
 
@@ -223,7 +223,7 @@ extension ObjectRecogViewController: ResultModalDelegate {
     }
     
     func onSpeakerButttonPressed(object: ObjectRecog) {
-        playObjectSound(player: player, objectRecog: object)
+        AVService.shared.playObjectSound(player: player, objectRecog: object)
     }
 }
 
@@ -283,7 +283,7 @@ extension ObjectRecogViewController {
         DispatchQueue.main.async { [unowned self] in
             showConfetti()
             showResultModal(object: objectRecog)
-            playAdditionalSound(player: player, type: "correct")
+            AVService.shared.playAdditionalSound(player: player, type: "correct")
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
             
             //push value to iwatch
