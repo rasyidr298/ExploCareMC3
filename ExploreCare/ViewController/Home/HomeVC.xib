@@ -27,7 +27,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3zK-sv-kbF">
                     <rect key="frame" x="44" y="0.0" width="852" height="414"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_char_manda" translatesAutoresizingMaskIntoConstraints="NO" id="VJj-pL-kz9">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_char_home" translatesAutoresizingMaskIntoConstraints="NO" id="VJj-pL-kz9">
                             <rect key="frame" x="16" y="24" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="50" id="d4p-vq-ja3"/>
@@ -53,7 +53,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.87058823529411766" green="0.90980392156862744" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.75686274509803919" green="0.92549019607843142" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="Nlg-bz-9c9" secondAttribute="trailing" constant="8" id="2Ej-EW-Ovu"/>
                                         <constraint firstItem="Nlg-bz-9c9" firstAttribute="leading" secondItem="Y9G-Py-eQi" secondAttribute="trailing" constant="8" id="2xf-rG-JPd"/>
@@ -69,27 +69,9 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTD-QU-Zcl">
-                                    <rect key="frame" x="154" y="0.0" width="42" height="42"/>
-                                    <color key="backgroundColor" red="1" green="0.93333333333333335" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="42" id="FRM-sO-LKc"/>
-                                    </constraints>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" image="speaker.wave.2.fill" catalog="system"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="21"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="soundStateAction:" destination="-1" eventType="touchUpInside" id="AEL-Se-h0h"/>
-                                    </connections>
-                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgs-u6-3nT">
-                                    <rect key="frame" x="208" y="0.0" width="42" height="42"/>
-                                    <color key="backgroundColor" red="1" green="0.93333333330000001" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <rect key="frame" x="154" y="0.0" width="42" height="42"/>
+                                    <color key="backgroundColor" red="0.75686274509803919" green="0.92549019607843142" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="42" id="pGv-aX-78P"/>
                                     </constraints>
@@ -103,6 +85,24 @@
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="helpAction:" destination="-1" eventType="touchUpInside" id="Rls-il-nWP"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTD-QU-Zcl">
+                                    <rect key="frame" x="208" y="0.0" width="42" height="42"/>
+                                    <color key="backgroundColor" red="0.75686274509803919" green="0.92549019607843142" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="42" id="FRM-sO-LKc"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="speaker.wave.2.fill" catalog="system"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="21"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="soundStateAction:" destination="-1" eventType="touchUpInside" id="AEL-Se-h0h"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -129,7 +129,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="0.93725490196078431" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="3zK-sv-kbF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9d4-UZ-Mix"/>
                 <constraint firstItem="pCS-cO-oiK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Cao-B8-bS7"/>
@@ -145,7 +145,7 @@
     </objects>
     <resources>
         <image name="background_home" width="1174.5" height="514.5"/>
-        <image name="ic_char_manda" width="100" height="100"/>
+        <image name="ic_char_home" width="210" height="210"/>
         <image name="ic_user_logo" width="84" height="84"/>
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <image name="speaker.wave.2.fill" catalog="system" width="128" height="90"/>
