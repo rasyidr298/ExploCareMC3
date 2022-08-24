@@ -193,7 +193,7 @@ extension ObjectRecogViewController: ResultModalDelegate {
     }
     
     func onSpeakerButttonPressed(object: ObjectRecog) {
-        playObjectSound(player: player, objectRecog: object)
+        AVService.shared.playObjectSound(player: player, objectRecog: object)
     }
 }
 
@@ -252,7 +252,8 @@ extension ObjectRecogViewController {
     func matchingObject(objectRecog: ObjectRecog) {
         DispatchQueue.main.async { [unowned self] in
             showResultModal(object: objectRecog)
-            playAdditionalSound(player: player, type: "correct")
+
+            AVService.shared.playAdditionalSound(player: player, type: "correct")
             
             //push value to iwatch
             viewModel.sendMessageToIwatch(name: udUserName, time: 0, startExplore: false)

@@ -91,6 +91,9 @@
 		B84E36AD28B34887004A3087 /* StorytellingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E36AB28B34887004A3087 /* StorytellingVC.swift */; };
 		B84E36AE28B34887004A3087 /* StorytellingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84E36AC28B34887004A3087 /* StorytellingVC.xib */; };
 		B84E36B028B3495E004A3087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84E36AF28B3495E004A3087 /* LaunchScreen.storyboard */; };
+		B8905C9328B5CA2C00D98127 /* background_music.mpeg in Resources */ = {isa = PBXBuildFile; fileRef = B8905C9228B5CA2C00D98127 /* background_music.mpeg */; };
+		B8905C9728B5CED100D98127 /* AdventureModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8905C9528B5CED100D98127 /* AdventureModalVC.swift */; };
+		B8905C9828B5CED100D98127 /* AdventureModalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8905C9628B5CED100D98127 /* AdventureModalVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +224,9 @@
 		B84E36AB28B34887004A3087 /* StorytellingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytellingVC.swift; sourceTree = "<group>"; };
 		B84E36AC28B34887004A3087 /* StorytellingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StorytellingVC.xib; sourceTree = "<group>"; };
 		B84E36AF28B3495E004A3087 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8905C9228B5CA2C00D98127 /* background_music.mpeg */ = {isa = PBXFileReference; lastKnownFileType = video.mpeg; path = background_music.mpeg; sourceTree = "<group>"; };
+		B8905C9528B5CED100D98127 /* AdventureModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureModalVC.swift; sourceTree = "<group>"; };
+		B8905C9628B5CED100D98127 /* AdventureModalVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdventureModalVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +380,7 @@
 		013458AB287050AA00BCAAE6 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				B8905C9228B5CA2C00D98127 /* background_music.mpeg */,
 				01B9724B28729920007F1521 /* book.mp3 */,
 				01B9724C28729921007F1521 /* clock.mp3 */,
 				01B9724A28729920007F1521 /* backpack.mp3 */,
@@ -442,7 +449,7 @@
 		01554D47286171C0008AEA27 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				01AE7EE128B5D33700CDB9CE /* Help Modal */,
+				B8905C9428B5CEAC00D98127 /* Adventure Modal */,
 				01AE7ECC28B50B4900CDB9CE /* Tutorial */,
 				014093E628B34A6300B6BF54 /* Feedback Feature */,
 				B84E36AA28B34873004A3087 /* Story telling */,
@@ -645,6 +652,15 @@
 			path = "Story telling";
 			sourceTree = "<group>";
 		};
+		B8905C9428B5CEAC00D98127 /* Adventure Modal */ = {
+			isa = PBXGroup;
+			children = (
+				B8905C9528B5CED100D98127 /* AdventureModalVC.swift */,
+				B8905C9628B5CED100D98127 /* AdventureModalVC.xib */,
+			);
+			path = "Adventure Modal";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -753,6 +769,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8905C9328B5CA2C00D98127 /* background_music.mpeg in Resources */,
 				01B972482872851A007F1521 /* correct.aiff in Resources */,
 				B843735528B3C63400A8A19E /* StorytellingObjectCell.xib in Resources */,
 				01B9725128729921007F1521 /* book.mp3 in Resources */,
@@ -763,6 +780,7 @@
 				01B9725228729921007F1521 /* clock.mp3 in Resources */,
 				01AE7EE028B527FE00CDB9CE /* ResultTutorialViewController.xib in Resources */,
 				B84E36B028B3495E004A3087 /* LaunchScreen.storyboard in Resources */,
+				B8905C9828B5CED100D98127 /* AdventureModalVC.xib in Resources */,
 				01B9725328729921007F1521 /* laptop.mp3 in Resources */,
 				01B9725428729921007F1521 /* tv.mp3 in Resources */,
 				011EA9B7286562580078D4CD /* OnBoardingViewController.xib in Resources */,
@@ -807,6 +825,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8905C9728B5CED100D98127 /* AdventureModalVC.swift in Sources */,
 				014093F228B34E4F00B6BF54 /* UIImage+Extension.swift in Sources */,
 				01E538D728AF74DF0017BFE4 /* DbViewModel.swift in Sources */,
 				B84C9DB628B327210067E305 /* LevelCell.swift in Sources */,
