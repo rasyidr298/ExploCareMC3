@@ -14,10 +14,8 @@
 		0116AC332886ED1C00840F81 /* HapticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0116AC322886ED1C00840F81 /* HapticsView.swift */; };
 		011EA9B22864CC550078D4CD /* ObjectRecogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */; };
 		011EA9B42864E4750078D4CD /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9B32864E4750078D4CD /* AppUtility.swift */; };
-		011EA9B7286562580078D4CD /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9B6286562580078D4CD /* OnBoardingViewController.xib */; };
 		011EA9BB286564030078D4CD /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BA286564030078D4CD /* OnBoardingPageViewController.swift */; };
 		011EA9BD286564210078D4CD /* OnBoardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BC286564210078D4CD /* OnBoardingContentViewController.swift */; };
-		011EA9BF286564410078D4CD /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BE286564410078D4CD /* OnBoardingViewController.swift */; };
 		011EA9C32865651C0078D4CD /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9C22865651C0078D4CD /* Haptics.swift */; };
 		011EA9C52865653F0078D4CD /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9C42865653F0078D4CD /* Constans.swift */; };
 		011EA9C828656B870078D4CD /* OnBoardingPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9C728656B870078D4CD /* OnBoardingPageViewController.xib */; };
@@ -73,6 +71,10 @@
 		17E2770228B34F6600D1174E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 17E2770128B34F6600D1174E /* FirebaseAnalytics */; };
 		17E2770428B34F6600D1174E /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 17E2770328B34F6600D1174E /* FirebaseAppDistribution-Beta */; };
 		17E2770628B34F6600D1174E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 17E2770528B34F6600D1174E /* FirebaseCrashlytics */; };
+		17E2770828B521E700D1174E /* OnboardingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E2770728B521E700D1174E /* OnboardingViewController.storyboard */; };
+		17E2770A28B5223500D1174E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2770928B5223500D1174E /* OnboardingViewController.swift */; };
+		17E2770E28B52B7D00D1174E /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2770D28B52B7D00D1174E /* OnboardingSlide.swift */; };
+		17E2771028B53A7A00D1174E /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2770F28B53A7A00D1174E /* OnboardingCollectionViewCell.swift */; };
 		B84C9DAB28B327160067E305 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C9DA928B327160067E305 /* UIView+Extension.swift */; };
 		B84C9DAC28B327160067E305 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C9DAA28B327160067E305 /* UIColor+Extension.swift */; };
 		B84C9DB528B327210067E305 /* LevelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84C9DAF28B327210067E305 /* LevelCell.xib */; };
@@ -136,10 +138,8 @@
 		0116AC322886ED1C00840F81 /* HapticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsView.swift; sourceTree = "<group>"; };
 		011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectRecogViewController.xib; sourceTree = "<group>"; };
 		011EA9B32864E4750078D4CD /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
-		011EA9B6286562580078D4CD /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 		011EA9BA286564030078D4CD /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
 		011EA9BC286564210078D4CD /* OnBoardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContentViewController.swift; sourceTree = "<group>"; };
-		011EA9BE286564410078D4CD /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		011EA9C22865651C0078D4CD /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		011EA9C42865653F0078D4CD /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		011EA9C728656B870078D4CD /* OnBoardingPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingPageViewController.xib; sourceTree = "<group>"; };
@@ -194,6 +194,10 @@
 		01E538D628AF74DF0017BFE4 /* DbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbViewModel.swift; sourceTree = "<group>"; };
 		01E538E228B2AB840017BFE4 /* AVServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVServices.swift; sourceTree = "<group>"; };
 		17E276FC28B34EA400D1174E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		17E2770728B521E700D1174E /* OnboardingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingViewController.storyboard; sourceTree = "<group>"; };
+		17E2770928B5223500D1174E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		17E2770D28B52B7D00D1174E /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		17E2770F28B53A7A00D1174E /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		B84C9DA928B327160067E305 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B84C9DAA28B327160067E305 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B84C9DAF28B327210067E305 /* LevelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelCell.xib; sourceTree = "<group>"; };
@@ -326,8 +330,10 @@
 		011EA9D42867033C0078D4CD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				011EA9BE286564410078D4CD /* OnBoardingViewController.swift */,
-				011EA9B6286562580078D4CD /* OnBoardingViewController.xib */,
+				17E2770728B521E700D1174E /* OnboardingViewController.storyboard */,
+				17E2770928B5223500D1174E /* OnboardingViewController.swift */,
+				17E2770D28B52B7D00D1174E /* OnboardingSlide.swift */,
+				17E2770F28B53A7A00D1174E /* OnboardingCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -706,7 +712,7 @@
 				B84E36B028B3495E004A3087 /* LaunchScreen.storyboard in Resources */,
 				01B9725328729921007F1521 /* laptop.mp3 in Resources */,
 				01B9725428729921007F1521 /* tv.mp3 in Resources */,
-				011EA9B7286562580078D4CD /* OnBoardingViewController.xib in Resources */,
+				17E2770828B521E700D1174E /* OnboardingViewController.storyboard in Resources */,
 				011EA9CA28656BD90078D4CD /* OnBoardingContentViewController.xib in Resources */,
 				B84E36AE28B34887004A3087 /* StorytellingVC.xib in Resources */,
 				B84C9DBE28B3272A0067E305 /* ResultModalVC.xib in Resources */,
@@ -764,6 +770,8 @@
 				B84E36AD28B34887004A3087 /* StorytellingVC.swift in Sources */,
 				011EA9BB286564030078D4CD /* OnBoardingPageViewController.swift in Sources */,
 				01E538E328B2AB840017BFE4 /* AVServices.swift in Sources */,
+				17E2771028B53A7A00D1174E /* OnboardingCollectionViewCell.swift in Sources */,
+				17E2770E28B52B7D00D1174E /* OnboardingSlide.swift in Sources */,
 				01E538D328AF744B0017BFE4 /* Category+CoreDataClass.swift in Sources */,
 				0124C7E3286435C0001A4D58 /* Measure.swift in Sources */,
 				0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */,
@@ -780,7 +788,7 @@
 				0124C7DF28643427001A4D58 /* DrawingBoundingBoxView.swift in Sources */,
 				0157CA66288854100008B287 /* ObjectRecogViewModel.swift in Sources */,
 				01E538D428AF744B0017BFE4 /* Category+CoreDataProperties.swift in Sources */,
-				011EA9BF286564410078D4CD /* OnBoardingViewController.swift in Sources */,
+				17E2770A28B5223500D1174E /* OnboardingViewController.swift in Sources */,
 				B84C9DB828B327210067E305 /* LevelSectionCell.swift in Sources */,
 				013458B52871AE5300BCAAE6 /* FinishViewController.swift in Sources */,
 			);
@@ -939,7 +947,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = QP5VRZQV2T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ExploreCare/SupportingFiles/Info.plist;
@@ -973,7 +981,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = QP5VRZQV2T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ExploreCare/SupportingFiles/Info.plist;
@@ -1009,7 +1017,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = QP5VRZQV2T;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = ExploreCareW_WatchKit_Extension;
@@ -1036,7 +1044,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = QP5VRZQV2T;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = ExploreCareW_WatchKit_Extension;
@@ -1059,7 +1067,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"ExploreCareW WatchKit Extension/SupportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = QP5VRZQV2T;
 				ENABLE_PREVIEWS = YES;
@@ -1091,7 +1099,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"ExploreCareW WatchKit Extension/SupportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = QP5VRZQV2T;
 				ENABLE_PREVIEWS = YES;

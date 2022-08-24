@@ -1,96 +1,75 @@
 //
-//  OnBoardingViewController.swift
-//  learnEnglish
+//  OnboardingViewController.swift
+//  ExploreCare
 //
-//  Created by Rasyid Ridla on 24/06/22.
+//  Created by Rahmat Rizky on 23/08/22.
 //
 
 import UIKit
 
-class OnBoardingViewController: UIViewController,UITextFieldDelegate {
-    
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
+class OnboardingViewController: UIViewController {
+
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var loginName: UITextField!
     
-    var onBoardingPageViewController: OnboardingPageViewController?
+    var slides: [OnboardingSlide] = []
+    
+    var currentPage = 0 {
+    didSet {
+        if currentPage == slides.count - 1 {
+            startBtn.setTitle(("Start"), for: .normal)
+            startBtn.isHidden = false
+        } else {
+            startBtn.isHidden = true
+        }
+    }
+}
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        setupPageView()
-        setupView()
+
+        pageControl.numberOfPages = 2
+        
+        slides = [
+            OnboardingSlide(title: "Learn Vocabulary", description: "Fun way to learn vocabulary", bg: UIImage(named: "Background1")!, illu: UIImage(named: "Illu1")!, leftChar: UIImage(named: "Char1Kiri")! , rightChar: UIImage(named: "Char1Kanan")!),
+            OnboardingSlide(title: "Explore Surroundings", description: "Get to know your surroundings while learning", bg: UIImage(named: "Background2")!, illu: UIImage(named: "Illu2")!, leftChar: UIImage(named: "Char2Kiri")! , rightChar: UIImage(named: "Char2Kanan")!)
+        ]
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
     }
     
-    private func setupView() {
-        startButton.layer.cornerRadius = 10
-        nextButton.layer.cornerRadius = 10
-        startButton.isHidden = true
-        loginName.isHidden = true
-        loginName.delegate = self
+    @IBAction func startBtnClicked(_ sender: Any) {
+        print("btn clicked")
     }
     
-    private func setupPageView() {
-        onBoardingPageViewController = OnboardingPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
-        
-        onBoardingPageViewController?.pageViewControllerDelegate = self
-        
-        containerView.addSubview((onBoardingPageViewController?.view)!)
-        onBoardingPageViewController?.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            onBoardingPageViewController!.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            onBoardingPageViewController!.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            onBoardingPageViewController!.view.topAnchor.constraint(equalTo: containerView.topAnchor),
-            onBoardingPageViewController!.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
-        ])
-        
-        onBoardingPageViewController?.didMove(toParent: self)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        loginName.resignFirstResponder()
-        return true
-    }
 }
 
-extension OnBoardingViewController {
-    @IBAction func nextButton(_ sender: Any) {
-        onBoardingPageViewController?.turnPage(index: pageControl.currentPage + 1, type: 1)
+extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return slides.count
     }
     
-    @IBAction func startButton(_ sender: Any) {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        if slides.count < 0 || slides.count > 1 {
+//            return nil
+//        }
         
-        if (loginName.text == "") {
-            allert(view: self, title: "Allert", message: "name is required!")
-        }else {
-            UserDefaults.standard.set(true, forKey: udIsShowOnBoardKey)
-            UserDefaults.standard.set(loginName.text, forKey: udUserNameKey)
-
-            guard let window = UIApplication.shared.keyWindow else {return}
-            window.rootViewController = TabExploreViewController()
-        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OnboardingCollectionViewCell.identifier, for: indexPath) as! OnboardingCollectionViewCell
+        
+        cell.setup(slides[indexPath.row])
+        return cell
     }
-}
-
-extension OnBoardingViewController: OnboardingPageViewControllerDelegate {
-    func setupPageController(numberOfPage: Int) {
-        pageControl.numberOfPages = numberOfPage
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
-    func turnPageController(to index: Int) {
-        pageControl.currentPage = index
-        
-        if index == 3 {
-            startButton.isHidden = false
-            nextButton.isHidden = true
-            loginName.isHidden = false
-        }else {
-            startButton.isHidden = true
-            nextButton.isHidden = false
-            loginName.isHidden = true
-        }
-        
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let width = scrollView.frame.width
+        currentPage = Int(scrollView.contentOffset.x / width)
+        pageControl.currentPage = currentPage
     }
+    
 }

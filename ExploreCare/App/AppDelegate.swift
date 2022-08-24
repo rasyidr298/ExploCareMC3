@@ -20,13 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
+        
         
         if !udIsShowOnBoard {
-            window?.rootViewController = OnBoardingViewController()
+            let vc = UIStoryboard(name: "OnboardingViewController", bundle: nil).instantiateViewController(withIdentifier: "OnboardingViewController")
+            window?.rootViewController = vc
         }else {
             window?.rootViewController = TabExploreViewController()
         }
+        
+        window?.makeKeyAndVisible()
         
         return true
     }
