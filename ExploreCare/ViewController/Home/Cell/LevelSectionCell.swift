@@ -16,6 +16,7 @@ class LevelSectionCell: UITableViewCell {
     @IBOutlet weak var levelsCollectionView: UICollectionView!
     
     private var selectHandler: (Category) -> Void = { _ in }
+    private var categories: [Category]!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,8 +29,10 @@ class LevelSectionCell: UITableViewCell {
         levelsCollectionView.register(UINib(nibName: "LevelCell", bundle: nil), forCellWithReuseIdentifier: LevelCell.REUSE_IDENTIFIER)
     }
     
-    func setupContents(title: String) {
+    func setupContents(title: String, categories: [Category]) {
         titleLabel.text = title
+        self.categories = categories
+        levelsCollectionView.reloadData()
     }
     
     func setupSelectHandler(handler: @escaping (Category) -> Void) {
@@ -40,7 +43,7 @@ class LevelSectionCell: UITableViewCell {
 
 extension LevelSectionCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        Category.dataObject().count
+        categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -48,7 +51,7 @@ extension LevelSectionCell: UICollectionViewDelegate, UICollectionViewDelegateFl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let categoryistData = Category.dataObject()[indexPath.row]
+        let categoryistData = categories[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LevelCell.REUSE_IDENTIFIER, for: indexPath) as! LevelCell
         cell.category = categoryistData
         cell.updateCategoryCell()
@@ -57,7 +60,7 @@ extension LevelSectionCell: UICollectionViewDelegate, UICollectionViewDelegateFl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        selectHandler(Category.dataObject()[indexPath.row])
+        selectHandler(categories[indexPath.row])
     }
     
 }

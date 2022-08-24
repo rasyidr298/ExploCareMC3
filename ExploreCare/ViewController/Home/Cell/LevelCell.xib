@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="257" height="213"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_level_garden" translatesAutoresizingMaskIntoConstraints="NO" id="mYf-eD-8j6">
-                                <rect key="frame" x="0.0" y="0.0" width="257" height="213"/>
+                                <rect key="frame" x="2" y="2" width="253" height="209"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="15"/>
@@ -28,8 +28,8 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garden" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DY4-sS-Dn4">
-                                <rect key="frame" x="70" y="156.5" width="117" height="33.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <rect key="frame" x="70" y="158.5" width="117" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -37,10 +37,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DY4-sS-Dn4" firstAttribute="leading" secondItem="yKU-eL-4Fk" secondAttribute="leading" constant="70" id="DB1-4F-8lS"/>
-                            <constraint firstItem="mYf-eD-8j6" firstAttribute="top" secondItem="yKU-eL-4Fk" secondAttribute="top" id="Ks9-U1-HRO"/>
-                            <constraint firstItem="mYf-eD-8j6" firstAttribute="leading" secondItem="yKU-eL-4Fk" secondAttribute="leading" id="LA3-oJ-9xa"/>
-                            <constraint firstAttribute="trailing" secondItem="mYf-eD-8j6" secondAttribute="trailing" id="NXD-vr-6j8"/>
-                            <constraint firstAttribute="bottom" secondItem="mYf-eD-8j6" secondAttribute="bottom" id="Wjc-Y5-qGT"/>
+                            <constraint firstItem="mYf-eD-8j6" firstAttribute="top" secondItem="yKU-eL-4Fk" secondAttribute="top" constant="2" id="Ks9-U1-HRO"/>
+                            <constraint firstItem="mYf-eD-8j6" firstAttribute="leading" secondItem="yKU-eL-4Fk" secondAttribute="leading" constant="2" id="LA3-oJ-9xa"/>
+                            <constraint firstAttribute="trailing" secondItem="mYf-eD-8j6" secondAttribute="trailing" constant="2" id="NXD-vr-6j8"/>
+                            <constraint firstAttribute="bottom" secondItem="mYf-eD-8j6" secondAttribute="bottom" constant="2" id="Wjc-Y5-qGT"/>
                             <constraint firstAttribute="trailing" secondItem="DY4-sS-Dn4" secondAttribute="trailing" constant="70" id="ghz-je-EzD"/>
                             <constraint firstAttribute="bottom" secondItem="DY4-sS-Dn4" secondAttribute="bottom" constant="23" id="vFg-nT-muB"/>
                         </constraints>
@@ -56,6 +56,7 @@
             </constraints>
             <connections>
                 <outlet property="backgroundImage" destination="mYf-eD-8j6" id="PSb-5x-vrl"/>
+                <outlet property="containerView" destination="yKU-eL-4Fk" id="JIT-VT-arL"/>
                 <outlet property="titleLabel" destination="DY4-sS-Dn4" id="1gP-Qh-GuB"/>
             </connections>
             <point key="canvasLocation" x="132" y="130"/>

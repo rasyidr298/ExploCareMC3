@@ -72,7 +72,19 @@ extension Category {
                 ObjectRecog(id: 5, name: "Backpack", objectName: "backpack", descriptionName: "Iky puts his sandwich in the backpack.", objectImage: UIImage(named: "ic_backpack")!, objectImageString: "ic_backpack", objectImageLabel: UIImage(named: "ic_backpack_label")!)
             ]),
             
-            Category(id: 4, categoryName: "Garden", categoryImage: UIImage(named: "background_garden")!, isLockLevel: false, storyTellingText: storyTelling(type: "garden"), charImage: UIImage(named: "ic_char_rass")!, object: [
+            Category(id: 4, categoryName: "Food", categoryImage: UIImage(named: "background_food")!, isLockLevel: false, storyTellingText: storyTelling(type: "food"), charImage: UIImage(named: "ic_char_tep")!, object: [
+                ObjectRecog(id: 1, name: "Banana", objectName: "banana", descriptionName: "Tep orders a banana split.", objectImage: UIImage(named: "ic_banana")!, objectImageString: "ic_banana", objectImageLabel: UIImage(named: "ic_banana_label")!),
+                ObjectRecog(id: 2, name: "Apple", objectName: "apple", descriptionName: "Tep gives apple to her teacher.", objectImage: UIImage(named: "ic_apple")!, objectImageString: "ic_apple", objectImageLabel: UIImage(named: "ic_apple_label")!),
+                ObjectRecog(id: 3, name: "Orange", objectName: "orange", descriptionName: "Tep drinks orange juice for breakfast.", objectImage: UIImage(named: "ic_orange")!, objectImageString: "ic_orange", objectImageLabel: UIImage(named: "ic_orange_label")!),
+                ObjectRecog(id: 4, name: "Carrot", objectName: "carrot", descriptionName: "Tep feeds carrots to her rabbits.", objectImage: UIImage(named: "ic_carrot")!, objectImageString: "ic_carrot", objectImageLabel: UIImage(named: "ic_carrot_label")!),
+                ObjectRecog(id: 5, name: "Broccoli", objectName: "broccoli", descriptionName: "Tep loves her broccoli soup.", objectImage: UIImage(named: "ic_broccoli")!, objectImageString: "ic_broccoli", objectImageLabel: UIImage(named: "ic_broccoli_label")!)
+            ]),
+        ]
+    }
+    
+    static func dataObjectAdventure() -> [Category] {
+        return [
+            Category(id: 5, categoryName: "Garden", categoryImage: UIImage(named: "background_garden")!, isLockLevel: false, storyTellingText: storyTelling(type: "garden"), charImage: UIImage(named: "ic_char_rass")!, object: [
                 ObjectRecog(id: 1, name: "Potted Plant", objectName: "pottedplant", descriptionName: "Rass is taking care of his potted plant.", objectImage: UIImage(named: "ic_pottedplant")!, objectImageString: "ic_pottedplant", objectImageLabel: UIImage(named: "ic_pottedplant_label")!),
                 ObjectRecog(id: 2, name: "Vase", objectName: "vase", descriptionName: "Rass just bought a new flower vase.", objectImage: UIImage(named: "ic_vase")!, objectImageString: "ic_vase", objectImageLabel: UIImage(named: "ic_vase_label")!),
                 ObjectRecog(id: 3, name: "Ball", objectName: "sportsball", descriptionName: "Rass got a new soccer ball on his birthday.", objectImage: UIImage(named: "ic_sportsball")!, objectImageString: "ic_sportsball", objectImageLabel: UIImage(named: "ic_sportsball_label")!),
@@ -80,20 +92,12 @@ extension Category {
                 ObjectRecog(id: 5, name: "Umbrella", objectName: "umbrella", descriptionName: "Rass has a colorful umbrella. ", objectImage: UIImage(named: "ic_umbrella")!, objectImageString: "ic_umbrella", objectImageLabel: UIImage(named: "ic_umbrella_label")!)
             ]),
             
-            Category(id: 5, categoryName: "Zoo", categoryImage: UIImage(named: "background_zoo")!, isLockLevel: false, storyTellingText: storyTelling(type: "zoo"), charImage: UIImage(named: "ic_char_manda")!, object: [
+            Category(id: 6, categoryName: "Zoo", categoryImage: UIImage(named: "background_zoo")!, isLockLevel: false, storyTellingText: storyTelling(type: "zoo"), charImage: UIImage(named: "ic_char_manda")!, object: [
                 ObjectRecog(id: 1, name: "Bear", objectName: "bear", descriptionName: "Manda sees the big sleeping bear.", objectImage: UIImage(named: "ic_bear")!, objectImageString: "ic_bear", objectImageLabel: UIImage(named: "ic_bear_label")!),
                 ObjectRecog(id: 2, name: "Zebra", objectName: "zebra", descriptionName: "Manda loves petting the baby zebra.  ", objectImage: UIImage(named: "ic_zebra")!, objectImageString: "ic_zebra", objectImageLabel: UIImage(named: "ic_zebra_label")!),
                 ObjectRecog(id: 3, name: "Bird", objectName: "bird", descriptionName: "Manda watches a colorful bird show.", objectImage: UIImage(named: "ic_bird")!, objectImageString: "ic_bird", objectImageLabel: UIImage(named: "ic_bird_label")!),
                 ObjectRecog(id: 4, name: "Elephant", objectName: "elephant", descriptionName: "Manda feeds fruits to the elephant. ", objectImage: UIImage(named: "ic_elephant")!, objectImageString: "ic_elephant", objectImageLabel: UIImage(named: "ic_elephant_label")!),
                 ObjectRecog(id: 5, name: "Giraffe", objectName: "giraffe", descriptionName: "Manda waves at the giraffe.", objectImage: UIImage(named: "ic_giraffe")!, objectImageString: "ic_giraffe", objectImageLabel: UIImage(named: "ic_giraffe_label")!)
-            ]),
-            
-            Category(id: 6, categoryName: "Food", categoryImage: UIImage(named: "background_food")!, isLockLevel: false, storyTellingText: storyTelling(type: "food"), charImage: UIImage(named: "ic_char_tep")!, object: [
-                ObjectRecog(id: 1, name: "Banana", objectName: "banana", descriptionName: "Tep orders a banana split.", objectImage: UIImage(named: "ic_banana")!, objectImageString: "ic_banana", objectImageLabel: UIImage(named: "ic_banana_label")!),
-                ObjectRecog(id: 2, name: "Apple", objectName: "apple", descriptionName: "Tep gives apple to her teacher.", objectImage: UIImage(named: "ic_apple")!, objectImageString: "ic_apple", objectImageLabel: UIImage(named: "ic_apple_label")!),
-                ObjectRecog(id: 3, name: "Orange", objectName: "orange", descriptionName: "Tep drinks orange juice for breakfast.", objectImage: UIImage(named: "ic_orange")!, objectImageString: "ic_orange", objectImageLabel: UIImage(named: "ic_orange_label")!),
-                ObjectRecog(id: 4, name: "Carrot", objectName: "carrot", descriptionName: "Tep feeds carrots to her rabbits.", objectImage: UIImage(named: "ic_carrot")!, objectImageString: "ic_carrot", objectImageLabel: UIImage(named: "ic_carrot_label")!),
-                ObjectRecog(id: 5, name: "Broccoli", objectName: "broccoli", descriptionName: "Tep loves her broccoli soup.", objectImage: UIImage(named: "ic_broccoli")!, objectImageString: "ic_broccoli", objectImageLabel: UIImage(named: "ic_broccoli_label")!)
             ]),
             
             Category(id: 7, categoryName: "Vehicles", categoryImage: UIImage(named: "background_vehicle")!, isLockLevel: false, storyTellingText: storyTelling(type: "vehicles"), charImage: UIImage(named: "ic_char_iky")!, object: [

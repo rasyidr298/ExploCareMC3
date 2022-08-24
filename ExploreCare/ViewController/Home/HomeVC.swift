@@ -108,7 +108,11 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LevelSectionCell.REUSE_IDENTIFIER) as! LevelSectionCell
-        cell.setupContents(title: indexPath.row == 0 ? "Finding the object" : "Have an adventure")
+        
+        let title = indexPath.row == 0 ? "Finding the object" : "Have an adventure"
+        let categories = indexPath.row == 0 ? Category.dataObject() : Category.dataObjectAdventure()
+        
+        cell.setupContents(title: title, categories: categories)
         cell.setupSelectHandler { [unowned self] category in
             if indexPath.row == 1 {
                 let adventureModal = AdventureModalVC()

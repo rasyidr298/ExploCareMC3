@@ -78,8 +78,13 @@ class ObjectRecogViewController: UIViewController {
     }
     
     @IBAction func closeButton(_ sender: Any) {
-        let vc = HomeVC()
-        navigationController?.pushViewController(vc, animated: true)
+        if let viewControllers = navigationController?.viewControllers {
+            for controller in viewControllers {
+                if controller is HomeVC {
+                    navigationController?.popToViewController(controller, animated: true)
+                }
+            }
+        }
         
         //push value to iwatch
         viewModel.sendMessageToIwatch(name: udUserName, time: 0, startExplore: false)
