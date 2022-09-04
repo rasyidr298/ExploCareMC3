@@ -30,7 +30,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        updateView()
+//        updateView()
         
         removeOnboardingFromNavigationHierarchy()
     }
@@ -40,7 +40,7 @@ class HomeVC: UIViewController {
         
         if !service.isPlayingBackgroundMusic {
             service.playBackgroundMusic()
-            soundStateButton.setImage(UIImage(systemName: "speaker.slash.fill"), for: .normal)
+            soundStateButton.setImage(UIImage(systemName: "speaker.wave.2.fill"), for: .normal)
         }
     }
     
@@ -85,10 +85,10 @@ class HomeVC: UIViewController {
     @IBAction private func soundStateAction(_ sender: Any) {
         if service.isPlayingBackgroundMusic {
             service.stopBackgroundMusic()
-            soundStateButton.setImage(UIImage(systemName: "speaker.wave.2.fill"), for: .normal)
+            soundStateButton.setImage(UIImage(systemName: "speaker.slash.fill"), for: .normal)
         } else {
             service.playBackgroundMusic()
-            soundStateButton.setImage(UIImage(systemName: "speaker.slash.fill"), for: .normal)
+            soundStateButton.setImage(UIImage(systemName: "speaker.wave.2.fill"), for: .normal)
         }
     }
     

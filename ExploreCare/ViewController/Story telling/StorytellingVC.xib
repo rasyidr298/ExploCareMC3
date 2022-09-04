@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,7 +45,7 @@
                                         <constraint firstAttribute="width" constant="50" id="Y3c-xB-czl"/>
                                     </constraints>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" image="ic_close_button"/>
+                                    <state key="normal" image="ic_tutorial_back"/>
                                     <connections>
                                         <action selector="closeAction:" destination="-1" eventType="touchUpInside" id="X4u-lU-7SS"/>
                                     </connections>
@@ -60,7 +61,7 @@
                                     <nil key="highlightedColor"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="10"/>
+                                            <real key="value" value="12.5"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
                                     </userDefinedRuntimeAttributes>
@@ -69,18 +70,18 @@
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuf-3O-tRR">
                             <rect key="frame" x="698" y="32" width="109" height="56"/>
-                            <color key="backgroundColor" red="0.1803921568627451" green="0.27843137254901962" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="soft_blue"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="56" id="TXB-zT-bh8"/>
                                 <constraint firstAttribute="width" constant="109" id="vCu-oz-jTo"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                            <color key="tintColor" red="0.99607843137254903" green="0.8666666666666667" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" name="mainColor"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Start"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="26"/>
+                                    <real key="value" value="28"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
@@ -173,7 +174,13 @@
     <resources>
         <image name="background_bedroom" width="900" height="561"/>
         <image name="ic_char_iky" width="155" height="155"/>
-        <image name="ic_close_button" width="96" height="96"/>
+        <image name="ic_tutorial_back" width="64" height="64"/>
+        <namedColor name="mainColor">
+            <color red="0.17900000512599945" green="0.27700001001358032" blue="0.46599999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="soft_blue">
+            <color red="0.75700002908706665" green="0.92500001192092896" blue="0.99900001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

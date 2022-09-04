@@ -23,9 +23,9 @@ class LevelCell: UICollectionViewCell {
         super.awakeFromNib()
         
         containerView.layer.shadowColor = UIColor.black.cgColor
-        containerView.layer.shadowRadius = 1.0
+        containerView.layer.shadowRadius = 2.0
         containerView.layer.shadowOpacity = 0.2
-        containerView.layer.shadowOffset = CGSize(width: 1, height: 1)
+        containerView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
         
         titleLabel.layer.shadowColor = UIColor.black.cgColor
         titleLabel.layer.shadowRadius = 3.0

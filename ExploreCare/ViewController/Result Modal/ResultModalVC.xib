@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,62 +32,36 @@
                             <color key="textColor" red="0.14509803921568626" green="0.56862745098039214" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="arG-Mg-G7x">
-                            <rect key="frame" x="50" y="68.5" width="265" height="191"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zGk-TO-5Fb">
-                                    <rect key="frame" x="82.5" y="0.0" width="100" height="100"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="100" id="7fU-Ny-udH"/>
-                                        <constraint firstAttribute="width" constant="100" id="HNl-cK-AYk"/>
-                                    </constraints>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="10"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </imageView>
-                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UGm-bP-irQ">
-                                    <rect key="frame" x="56.5" y="116" width="152" height="41"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Object" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOd-ls-tEH">
-                                            <rect key="frame" x="0.0" y="0.0" width="106" height="41"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMV-Ny-pmA">
-                                            <rect key="frame" x="122" y="5.5" width="30" height="30"/>
-                                            <color key="backgroundColor" red="0.87058823529411766" green="0.90980392156862744" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="K8z-aE-MYd"/>
-                                                <constraint firstAttribute="width" constant="30" id="qAu-F4-HtC"/>
-                                            </constraints>
-                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" image="speaker.wave.2" catalog="system"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="15"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="voiceOverAction:" destination="-1" eventType="touchUpInside" id="PRa-lx-TzU"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                </stackView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eG-0G-U4G">
-                                    <rect key="frame" x="112.5" y="173" width="40" height="18"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eG-0G-U4G">
+                            <rect key="frame" x="162.5" y="242" width="40" height="18"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zGk-TO-5Fb">
+                            <rect key="frame" x="132.5" y="71" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="Cza-Iq-uSn"/>
+                                <constraint firstAttribute="height" constant="100" id="rZu-v1-2AE"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Objecsafect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOd-ls-tEH">
+                            <rect key="frame" x="86" y="179" width="193" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="41" id="XGT-3e-OdV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHJ-kE-L8K">
                             <rect key="frame" x="140.5" y="299" width="84" height="38"/>
-                            <color key="backgroundColor" red="0.1803921568627451" green="0.27843137254901962" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="soft_blue"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="38" id="goR-gR-KSB"/>
                                 <constraint firstAttribute="width" constant="84" id="nVg-Mx-vJO"/>
@@ -94,7 +69,7 @@
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Next">
-                                <color key="titleColor" red="0.99607843137254903" green="0.8666666666666667" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" name="mainColor"/>
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -105,18 +80,41 @@
                                 <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="s1a-Tn-NMW"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMV-Ny-pmA">
+                            <rect key="frame" x="297" y="184" width="30" height="30"/>
+                            <color key="backgroundColor" red="0.87058823529411766" green="0.90980392156862744" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="K8z-aE-MYd"/>
+                                <constraint firstAttribute="width" constant="30" id="qAu-F4-HtC"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="speaker.wave.2" catalog="system"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="voiceOverAction:" destination="-1" eventType="touchUpInside" id="PRa-lx-TzU"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="mOd-ls-tEH" firstAttribute="top" secondItem="zGk-TO-5Fb" secondAttribute="bottom" constant="8" id="AOG-fK-eYt"/>
                         <constraint firstAttribute="trailing" secondItem="JGu-lB-M6Z" secondAttribute="trailing" constant="16" id="BK5-gD-4nM"/>
                         <constraint firstItem="ZHJ-kE-L8K" firstAttribute="centerX" secondItem="Jx7-a5-0T9" secondAttribute="centerX" id="IuC-GI-wFc"/>
                         <constraint firstAttribute="width" constant="365" id="NM7-hU-uxC"/>
+                        <constraint firstItem="mOd-ls-tEH" firstAttribute="centerX" secondItem="Jx7-a5-0T9" secondAttribute="centerX" id="QvT-0I-wSZ"/>
                         <constraint firstAttribute="bottom" secondItem="ZHJ-kE-L8K" secondAttribute="bottom" constant="24" id="SdH-A3-Dxb"/>
                         <constraint firstItem="JGu-lB-M6Z" firstAttribute="top" secondItem="Jx7-a5-0T9" secondAttribute="top" constant="32" id="Sej-Aq-FZI"/>
-                        <constraint firstItem="arG-Mg-G7x" firstAttribute="leading" secondItem="Jx7-a5-0T9" secondAttribute="leading" constant="50" id="YtI-xP-B9G"/>
-                        <constraint firstAttribute="trailing" secondItem="arG-Mg-G7x" secondAttribute="trailing" constant="50" id="qWd-uh-hr9"/>
+                        <constraint firstItem="7eG-0G-U4G" firstAttribute="top" secondItem="mOd-ls-tEH" secondAttribute="bottom" constant="22" id="Ust-VH-qdr"/>
+                        <constraint firstItem="PMV-Ny-pmA" firstAttribute="leading" secondItem="mOd-ls-tEH" secondAttribute="trailing" constant="18" id="UtU-HQ-t8H"/>
+                        <constraint firstItem="zGk-TO-5Fb" firstAttribute="centerX" secondItem="Jx7-a5-0T9" secondAttribute="centerX" id="gKg-nf-GoP"/>
                         <constraint firstItem="JGu-lB-M6Z" firstAttribute="leading" secondItem="Jx7-a5-0T9" secondAttribute="leading" constant="16" id="sMc-jM-T99"/>
-                        <constraint firstItem="arG-Mg-G7x" firstAttribute="top" secondItem="JGu-lB-M6Z" secondAttribute="bottom" constant="16" id="wd3-C4-epG"/>
+                        <constraint firstItem="mOd-ls-tEH" firstAttribute="centerX" secondItem="Jx7-a5-0T9" secondAttribute="centerX" id="uZB-GI-A9y"/>
+                        <constraint firstItem="7eG-0G-U4G" firstAttribute="centerX" secondItem="Jx7-a5-0T9" secondAttribute="centerX" id="wHV-j1-lo2"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -137,5 +135,11 @@
     </objects>
     <resources>
         <image name="speaker.wave.2" catalog="system" width="128" height="90"/>
+        <namedColor name="mainColor">
+            <color red="0.17900000512599945" green="0.27700001001358032" blue="0.46599999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="soft_blue">
+            <color red="0.75700002908706665" green="0.92500001192092896" blue="0.99900001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
