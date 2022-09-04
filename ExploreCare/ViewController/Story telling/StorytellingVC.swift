@@ -11,6 +11,7 @@ class StorytellingVC: UIViewController {
 
     // MARK: - IBOutlets and UI Components
     @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var charImage: UIImageView!
     
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var levelNameLabel: UILabel!
@@ -49,6 +50,8 @@ class StorytellingVC: UIViewController {
         objectsCollectionView.register(UINib(nibName: "StorytellingObjectCell", bundle: nil), forCellWithReuseIdentifier: StorytellingObjectCell.REUSE_IDENTIFIER)
         levelDescriptionLabel.text = category?.storyTellingText
         levelNameLabel.text = "  \(category?.categoryName ?? "")  "
+        backgroundImage.image = category?.categoryImage
+        charImage.image = category?.charImage
     }
     
     private func playMusic() {

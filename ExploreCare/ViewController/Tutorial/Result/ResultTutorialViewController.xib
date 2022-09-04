@@ -97,9 +97,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="389" height="118"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQY-XL-Uw3">
-                            <rect key="frame" x="35" y="31" width="318" height="56"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQY-XL-Uw3">
+                            <rect key="frame" x="35" y="2" width="318" height="114"/>
                             <string key="text">Great! You found the BOTTLE!
 Now, you’re ready to explore. Let’s go!</string>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -109,11 +108,15 @@ Now, you’re ready to explore. Let’s go!</string>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="LQY-XL-Uw3" firstAttribute="top" secondItem="iMe-Sx-hvm" secondAttribute="top" constant="2" id="ABA-1n-OWh"/>
+                        <constraint firstAttribute="bottom" secondItem="LQY-XL-Uw3" secondAttribute="bottom" constant="2" id="CEY-cW-ogN"/>
                         <constraint firstAttribute="height" constant="118" id="Ght-ZO-60X"/>
                         <constraint firstAttribute="trailing" secondItem="P46-bV-2mg" secondAttribute="trailing" id="Mod-L9-omY"/>
+                        <constraint firstItem="LQY-XL-Uw3" firstAttribute="leading" secondItem="iMe-Sx-hvm" secondAttribute="leading" constant="35" id="Xxu-vA-D7R"/>
                         <constraint firstAttribute="bottom" secondItem="P46-bV-2mg" secondAttribute="bottom" id="YMQ-5k-PFg"/>
                         <constraint firstItem="P46-bV-2mg" firstAttribute="leading" secondItem="iMe-Sx-hvm" secondAttribute="leading" id="ejR-mv-SNu"/>
                         <constraint firstAttribute="width" constant="389" id="lF0-TU-B42"/>
+                        <constraint firstAttribute="trailing" secondItem="LQY-XL-Uw3" secondAttribute="trailing" constant="36" id="rTZ-9v-2NC"/>
                         <constraint firstItem="P46-bV-2mg" firstAttribute="top" secondItem="iMe-Sx-hvm" secondAttribute="top" id="rsw-O7-rdg"/>
                     </constraints>
                 </view>
