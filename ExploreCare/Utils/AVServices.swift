@@ -16,7 +16,7 @@ class AVService {
     
     static let shared = AVService()
     
-    private init() {}
+//    private init() {}
     
     func playMusic(name: String, type: String){
         //akses alamat
